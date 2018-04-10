@@ -1,0 +1,6 @@
+framework module Pods_CrossyLines {
+  umbrella header "Pods-CrossyLines-umbrella.h"
+
+  export *
+  module * { export * }
+}
