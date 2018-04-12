@@ -9,6 +9,6 @@ target 'CrossyLines' do
   pod 'SwiftRandom'
   pod 'SwiftyUtils'
   pod 'Eureka'
-  pod 'UIView+draggable'
+  pod 'SEDraggable'
 
 end
