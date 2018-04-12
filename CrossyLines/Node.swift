@@ -18,8 +18,13 @@ struct Point: Hashable {
 }
 
 class Node: Hashable {
-    var x: CGFloat = 0
-    var y: CGFloat = 0
+    var x: CGFloat
+    var y: CGFloat
+    
+    init(x: CGFloat, y: CGFloat) {
+        self.x = x
+        self.y = y
+    }
     
     static func ==(lhs: Node, rhs: Node) -> Bool {
         return ObjectIdentifier(lhs) == ObjectIdentifier(rhs)
