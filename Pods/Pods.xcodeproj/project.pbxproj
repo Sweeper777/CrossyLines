@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -205,7 +205,7 @@
 		5A61B3585225A9F83D8178FCC15ADAB5 /* Protocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protocols.swift; path = Source/Rows/Common/Protocols.swift; sourceTree = "<group>"; };
 		5A93EB43B591D7F2DE1AD656651C8C1A /* ListCheckRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ListCheckRow.swift; path = Source/Rows/SelectableRows/ListCheckRow.swift; sourceTree = "<group>"; };
 		5AA0D999C7645FB4CC03739A4357E0D5 /* ColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorExtension.swift; path = Sources/Extensions/ColorExtension.swift; sourceTree = "<group>"; };
-		5D06D169ED592AE5A24097D93DB3D49E /* Pods-CrossyLines.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CrossyLines.modulemap"; sourceTree = "<group>"; };
+		5D06D169ED592AE5A24097D93DB3D49E /* Pods-CrossyLines.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CrossyLines.modulemap"; sourceTree = "<group>"; };
 		5D7809DA56FC1126898844B70CF55D99 /* DecimalFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DecimalFormatter.swift; path = Source/Rows/Common/DecimalFormatter.swift; sourceTree = "<group>"; };
 		5F259509F0F58E3B222DD1C12877B1AC /* Eureka.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = Eureka.bundle; path = Source/Resources/Eureka.bundle; sourceTree = "<group>"; };
 		5F5B6AF78AFF5DB4DD124C632F3B5A6B /* PresenterRowType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresenterRowType.swift; path = Source/Core/PresenterRowType.swift; sourceTree = "<group>"; };
@@ -215,7 +215,7 @@
 		6222ED9391D3638D5B76F1185608669B /* DateRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateRow.swift; path = Source/Rows/DateRow.swift; sourceTree = "<group>"; };
 		640797182CD2F96B6DF52CB8D382B528 /* Pods-CrossyLines-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CrossyLines-acknowledgements.plist"; sourceTree = "<group>"; };
 		6447B026940EF9506DFB58A853698EB8 /* CheckRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckRow.swift; path = Source/Rows/CheckRow.swift; sourceTree = "<group>"; };
-		67E709892C9054E9A49F647D979552FC /* Pods_CrossyLines.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CrossyLines.framework; path = "Pods-CrossyLines.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		67E709892C9054E9A49F647D979552FC /* Pods_CrossyLines.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CrossyLines.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		69D5FFB8C640B09A4624253DBC6F621A /* OptionsRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OptionsRow.swift; path = Source/Rows/Common/OptionsRow.swift; sourceTree = "<group>"; };
 		6A6D16D6AD6D910814D1AAFE6B4143D6 /* CGSizeExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGSizeExtension.swift; path = Sources/Extensions/CGSizeExtension.swift; sourceTree = "<group>"; };
 		6C351A6B97BFB6CE47AE564E44FD1B3B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -223,8 +223,8 @@
 		6E8242573CDDFCCC1C35323EBE2ED9E1 /* SEDraggable.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SEDraggable.m; path = Classes/SEDraggable.m; sourceTree = "<group>"; };
 		706E93AC8019A6430FA2562C61B2D0BC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72EBA0BBFAD193D01E34EB1ED184C3DE /* SliderRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SliderRow.swift; path = Source/Rows/SliderRow.swift; sourceTree = "<group>"; };
-		76BA0B3DF9AE67D08F19230C2A211FA7 /* SwiftRandom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftRandom.framework; path = SwiftRandom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		776D2465E6D83D57A0208F2B547BAC9F /* SEDraggable.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SEDraggable.modulemap; sourceTree = "<group>"; };
+		76BA0B3DF9AE67D08F19230C2A211FA7 /* SwiftRandom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftRandom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		776D2465E6D83D57A0208F2B547BAC9F /* SEDraggable.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SEDraggable.modulemap; sourceTree = "<group>"; };
 		782C6DA562CE1BD26D358B1276AA459B /* BundleExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BundleExtension.swift; path = Sources/Extensions/BundleExtension.swift; sourceTree = "<group>"; };
 		7914064EF543D0998009E7517571349F /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIAlertControllerExtension.swift; path = Sources/Extensions/UIKit/UIAlertControllerExtension.swift; sourceTree = "<group>"; };
 		796E92AEF94979CDA0448C66BAFADE4D /* Pods-CrossyLines-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CrossyLines-dummy.m"; sourceTree = "<group>"; };
@@ -239,15 +239,15 @@
 		8BDB9A9C4E728D1FD7F7E240D7688CEA /* SEDraggable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SEDraggable.h; path = Classes/SEDraggable.h; sourceTree = "<group>"; };
 		90C4A2DB31424D77CA3538447529E821 /* SelectorViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectorViewController.swift; path = Source/Rows/Controllers/SelectorViewController.swift; sourceTree = "<group>"; };
 		925E5D7032B1FC7D369B0342844ACBA1 /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIStoryboardExtension.swift; path = Sources/Extensions/UIKit/UIStoryboardExtension.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		941E61EDF7B240086FC04FE2615ACAF7 /* StringExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = Sources/Extensions/StringExtension.swift; sourceTree = "<group>"; };
 		9454B065E495F3A9DBAA0C7D43ECE843 /* SEDraggableLocation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SEDraggableLocation.m; path = Classes/SEDraggableLocation.m; sourceTree = "<group>"; };
-		948AD04C7346F7055D6787AA29A81B35 /* SEDraggable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SEDraggable.framework; path = SEDraggable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		948AD04C7346F7055D6787AA29A81B35 /* SEDraggable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SEDraggable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A4C3D758423A9A8AF127B0D0069674 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIDeviceExtension.swift; path = Sources/Extensions/UIKit/UIDeviceExtension.swift; sourceTree = "<group>"; };
 		96DADC88D782CFECDE86C6F5864E839E /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIViewControllerExtension.swift; path = Sources/Extensions/UIKit/UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		9932B7CD73D8EBDABC133640D58A6181 /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = Source/Core/Helpers.swift; sourceTree = "<group>"; };
 		9936C74B5AA21DB4642138A83E980793 /* UIViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIViewExtension.swift; path = Sources/Extensions/UIKit/UIViewExtension.swift; sourceTree = "<group>"; };
-		99FD3200DDD2897412DC9740FADFF58D /* SwiftRandom.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftRandom.modulemap; sourceTree = "<group>"; };
+		99FD3200DDD2897412DC9740FADFF58D /* SwiftRandom.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftRandom.modulemap; sourceTree = "<group>"; };
 		9A1D54A250CD1ED809DCA1DACB613DFF /* UITesting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITesting.swift; path = Sources/Others/UITesting.swift; sourceTree = "<group>"; };
 		9C9390833578387F8745AE5EFB971F41 /* Eureka-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Eureka-prefix.pch"; sourceTree = "<group>"; };
 		9D1CB4DD982161255F9A464F57610EA2 /* Pods-CrossyLines.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CrossyLines.debug.xcconfig"; sourceTree = "<group>"; };
@@ -256,7 +256,7 @@
 		A1FAAB488372D27B9E0EF351D9163222 /* BaseRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BaseRow.swift; path = Source/Core/BaseRow.swift; sourceTree = "<group>"; };
 		A2F4F07F3C65E0E93912DE9CBC1691B7 /* SwiftRandom-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftRandom-dummy.m"; sourceTree = "<group>"; };
 		A421D7B1F513CB47931234060BC2BF79 /* SEDraggable-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SEDraggable-umbrella.h"; sourceTree = "<group>"; };
-		A7B2CD0368E1CA04C1AAEE19B2AD2405 /* Eureka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Eureka.framework; path = Eureka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7B2CD0368E1CA04C1AAEE19B2AD2405 /* Eureka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Eureka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD6ED2F03CF2D243CFEF591D7CF4001 /* RuleLength.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleLength.swift; path = Source/Validations/RuleLength.swift; sourceTree = "<group>"; };
 		AD9236713DE931B655C067902B997485 /* Eureka-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Eureka-dummy.m"; sourceTree = "<group>"; };
 		AEFCE96DB3D00392603F69BC3DCF9B64 /* Section.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Section.swift; path = Source/Core/Section.swift; sourceTree = "<group>"; };
@@ -264,7 +264,7 @@
 		AFD3139EF07A41E3D7350A460FF2874E /* Pods-CrossyLines-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CrossyLines-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B0B43E3A93875BB2FDBC15B2F1FC3015 /* SEDraggableLocation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SEDraggableLocation.h; path = Classes/SEDraggableLocation.h; sourceTree = "<group>"; };
 		B1686E9B680DFF25F1C0D80B85AAB672 /* Eureka-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Eureka-umbrella.h"; sourceTree = "<group>"; };
-		B226177E534299BD6CD9AE58E455739D /* Eureka.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Eureka.modulemap; sourceTree = "<group>"; };
+		B226177E534299BD6CD9AE58E455739D /* Eureka.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Eureka.modulemap; sourceTree = "<group>"; };
 		B3508ECAE6280714E12905ED025E8BAE /* Cell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cell.swift; path = Source/Core/Cell.swift; sourceTree = "<group>"; };
 		B3A3C69CD7D93DF7338CD2C7F5C2A6A4 /* PushRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PushRow.swift; path = Source/Rows/PushRow.swift; sourceTree = "<group>"; };
 		B49C1E1B9FEA3C3DC9691899790B8A90 /* CellType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CellType.swift; path = Source/Core/CellType.swift; sourceTree = "<group>"; };
@@ -280,7 +280,7 @@
 		BF556F8C3A01A184FB581D3A64B3AD34 /* Eureka.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Eureka.xcconfig; sourceTree = "<group>"; };
 		C053961343EEA76EAC49601A690F66BE /* ActionSheetRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionSheetRow.swift; path = Source/Rows/ActionSheetRow.swift; sourceTree = "<group>"; };
 		C29B49ADA4E50108246D8F8CA9263016 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C63DD854338788D3CD24B4CE6B230F83 /* SwiftyUtils.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyUtils.modulemap; sourceTree = "<group>"; };
+		C63DD854338788D3CD24B4CE6B230F83 /* SwiftyUtils.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyUtils.modulemap; sourceTree = "<group>"; };
 		C66245433E972D814FF5B01E1F37D9E2 /* DateInlineFieldRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateInlineFieldRow.swift; path = Source/Rows/Common/DateInlineFieldRow.swift; sourceTree = "<group>"; };
 		C6DA82D16551BB6EF5697C55B24BFE22 /* AlertRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlertRow.swift; path = Source/Rows/AlertRow.swift; sourceTree = "<group>"; };
 		C78FE869F37B08648A4FEC35AD3C2C2A /* NSRangeExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSRangeExtension.swift; path = Sources/Extensions/NSRangeExtension.swift; sourceTree = "<group>"; };
@@ -304,7 +304,7 @@
 		ECF062839127BEE70430A83D839B2CC8 /* Then.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Then.swift; path = Sources/Protocols/Then.swift; sourceTree = "<group>"; };
 		EF2395FAB4FF62704A8CCD1A95485C3F /* DoubleExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DoubleExtension.swift; path = Sources/Extensions/DoubleExtension.swift; sourceTree = "<group>"; };
 		EF829FB03B257317B505A131BD211F44 /* Occupiable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Occupiable.swift; path = Sources/Protocols/Occupiable.swift; sourceTree = "<group>"; };
-		F009EEADA1EA771FB31DA17D95F1E1DF /* SwiftyUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyUtils.framework; path = SwiftyUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F009EEADA1EA771FB31DA17D95F1E1DF /* SwiftyUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F03DD3314098EFB7D4E9715DA6E820DD /* SEDraggable.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SEDraggable.xcconfig; sourceTree = "<group>"; };
 		F11BC299696EC44921CF178EE42654E7 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Source/Core/Operators.swift; sourceTree = "<group>"; };
 		F612746C7C530F4016F3962E04C9F87B /* SelectorAlertController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectorAlertController.swift; path = Source/Rows/Controllers/SelectorAlertController.swift; sourceTree = "<group>"; };
@@ -468,7 +468,6 @@
 				D47D8A749D07B47534F276558895473F /* Resources */,
 				2171E240B8022D0EAC2F328A095512D3 /* Support Files */,
 			);
-			name = Eureka;
 			path = Eureka;
 			sourceTree = "<group>";
 		};
@@ -503,7 +502,6 @@
 				D6C061FF51A532EB94721846B913A3FD /* Randoms.swift */,
 				08129FE8142DB6B6F6DEFA2AFDC4EC6B /* Support Files */,
 			);
-			name = SwiftRandom;
 			path = SwiftRandom;
 			sourceTree = "<group>";
 		};
@@ -557,7 +555,6 @@
 				9454B065E495F3A9DBAA0C7D43ECE843 /* SEDraggableLocation.m */,
 				F335BFEBD0FBCF707CCB1A6D4B82D460 /* Support Files */,
 			);
-			name = SEDraggable;
 			path = SEDraggable;
 			sourceTree = "<group>";
 		};
@@ -629,7 +626,6 @@
 				1C86454C7C8617E821F3673B2A90B4ED /* UserDefaultsExtension.swift */,
 				246FCDE6393066EDFD4BBB4D8D3CB70B /* Support Files */,
 			);
-			name = SwiftyUtils;
 			path = SwiftyUtils;
 			sourceTree = "<group>";
 		};
@@ -789,7 +785,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0920;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1177,6 +1173,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
