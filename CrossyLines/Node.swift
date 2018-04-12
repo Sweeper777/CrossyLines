@@ -33,4 +33,8 @@ class Node: Hashable {
     var hashValue: Int {
         return ObjectIdentifier(self).hashValue
     }
+    
+    func samePointAs(_ node: Node) -> Bool {
+        return x == node.x && y == node.y
+    }
 }
