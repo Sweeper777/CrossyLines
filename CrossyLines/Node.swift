@@ -38,3 +38,9 @@ class Node: Hashable {
         return x == node.x && y == node.y
     }
 }
+
+struct Connection: Hashable, CustomStringConvertible {
+    let node1: Node
+    let node2: Node
+    
+}
