@@ -43,4 +43,8 @@ struct Connection: Hashable, CustomStringConvertible {
     let node1: Node
     let node2: Node
     
+    func isConnected(to node: Node) -> Bool {
+        return node1 == node || node2 == node
+    }
+    
 }
