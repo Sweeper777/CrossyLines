@@ -64,4 +64,12 @@ struct Connection: Hashable, CustomStringConvertible {
         }
         return true
     }
+    
+    static func ==(lhs: Connection, rhs: Connection) -> Bool {
+        return lhs.isConnected(to: rhs.node1) && lhs.isConnected(to: rhs.node2)
+    }
+    
+    var hashValue: Int {
+        return node1.hashValue ^ node2.hashValue
+    }
 }
