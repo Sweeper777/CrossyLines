@@ -47,4 +47,21 @@ struct Connection: Hashable, CustomStringConvertible {
         return node1 == node || node2 == node
     }
     
+    func intersects(with connection: Connection) -> Bool {
+        let p1 = self.node1
+        let p2 = self.node2
+        let p3 = connection.node1
+        let p4 = connection.node2
+        let d = (p2.x - p1.x)*(p4.y - p3.y) - (p2.y - p1.y)*(p4.x - p3.x)
+        if d == 0 {
+            return false
+        }
+        
+        let u = ((p3.x - p1.x)*(p4.y - p3.y) - (p3.y - p1.y)*(p4.x - p3.x))/d
+        let v = ((p3.x - p1.x)*(p2.y - p1.y) - (p3.y - p1.y)*(p2.x - p1.x))/d
+        if !(0.0...1.0).contains(u) || !(0.0...1.0).contains(v) {
+            return false
+        }
+        return true
+    }
 }
