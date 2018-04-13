@@ -72,4 +72,7 @@ struct Connection: Hashable, CustomStringConvertible {
     var hashValue: Int {
         return node1.hashValue ^ node2.hashValue
     }
+    var description: String {
+        return "(\(node1.x), \(node1.y), \(node2.x), \(node2.y))"
+    }
 }
