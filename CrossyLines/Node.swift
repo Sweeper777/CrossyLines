@@ -111,5 +111,20 @@ class Graph {
             nodes.append(Node(x: CGFloat(point.x * 40), y: CGFloat(point.y * 40)))
         }
         
+        var degrees = [Node: Int]()
+        connections = []
+        var edgeAdded = false
+        addEdge: while true {
+            edgeAdded = false
+            for nodeToAddEdge in nodeArrayInOrderOfDegree(degreesDict: degrees) {
+                let nearestNeighbours = nodeArrayInOrderOfDistance(to: nodeToAddEdge)
+                for neighbour in nearestNeighbours {
+                }
+            }
+            if !edgeAdded {
+                break
+            }
+        }
+        print(degrees)
     }
 }
