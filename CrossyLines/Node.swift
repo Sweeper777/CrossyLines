@@ -119,6 +119,17 @@ class Graph {
             for nodeToAddEdge in nodeArrayInOrderOfDegree(degreesDict: degrees) {
                 let nearestNeighbours = nodeArrayInOrderOfDistance(to: nodeToAddEdge)
                 for neighbour in nearestNeighbours {
+                    let candidateEdge = Connection(node1: nodeToAddEdge, node2: neighbour)
+                    let notDuplicate = !connections.contains(candidateEdge)
+                    let notIntersecting = !connections.contains { $0.intersects(with: candidateEdge) }
+                    let notExceedingMaxDegree = (degrees[nodeToAddEdge] ?? 0) < maxDegree && (degrees[neighbour] ?? 0) < maxDegree
+                    if notDuplicate && notIntersecting && notExceedingMaxDegree {
+                        connections.insert(candidateEdge)
+                        degrees[nodeToAddEdge] = (degrees[nodeToAddEdge] ?? 0) + 1
+                        degrees[neighbour] = (degrees[neighbour] ?? 0) + 1
+                        edgeAdded = true
+                        continue addEdge
+                    }
                 }
             }
             if !edgeAdded {
