@@ -76,3 +76,9 @@ struct Connection: Hashable, CustomStringConvertible {
         return "(\(node1.x), \(node1.y), \(node2.x), \(node2.y))"
     }
 }
+
+class Graph {
+    var nodes: Array<Node>
+    var connections: Set<Connection>
+    
+}
