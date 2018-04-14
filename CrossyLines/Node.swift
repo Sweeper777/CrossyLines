@@ -1,4 +1,6 @@
 import CoreGraphics
+import SwiftRandom
+
 struct Point: Hashable {
     let x: Int
     let y: Int
