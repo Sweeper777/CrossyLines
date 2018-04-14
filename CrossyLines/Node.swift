@@ -81,4 +81,10 @@ class Graph {
     var nodes: Array<Node>
     var connections: Set<Connection>
     
+    private func nodeArrayInOrderOfDegree(degreesDict: [Node: Int]) -> [Node] {
+        return nodes.sorted(by: { (a, b) -> Bool in
+            return (degreesDict[a] ?? 0) <= (degreesDict[b] ?? 0)
+        })
+    }
+    
 }
