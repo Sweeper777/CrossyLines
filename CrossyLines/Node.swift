@@ -87,4 +87,12 @@ class Graph {
         })
     }
     
+    private func nodeArrayInOrderOfDistance(to node: Node) -> [Node] {
+        return Array(nodes.sorted(by: { (a, b) -> Bool in
+            let aDist = sqrt(pow(a.x - node.x, 2) + pow(a.y - node.y, 2))
+            let bDist = sqrt(pow(b.x - node.x, 2) + pow(b.y - node.y, 2))
+            return aDist < bDist
+        }).dropFirst())
+    }
+    
 }
