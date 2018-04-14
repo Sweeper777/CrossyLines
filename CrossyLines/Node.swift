@@ -95,4 +95,21 @@ class Graph {
         }).dropFirst())
     }
     
+    init(nodeCount: Int, maxDegree: Int) {
+        nodes = []
+        var usedPoints = Set<Point>()
+        for _ in 0..<nodeCount {
+            while true {
+                let point = Point(x: Int.random(0, nodeCount / 2), y: Int.random(0, nodeCount / 2))
+                if usedPoints.insert(point).inserted {
+                    break
+                }
+            }
+        }
+        
+        for point in usedPoints {
+            nodes.append(Node(x: CGFloat(point.x * 40), y: CGFloat(point.y * 40)))
+        }
+        
+    }
 }
