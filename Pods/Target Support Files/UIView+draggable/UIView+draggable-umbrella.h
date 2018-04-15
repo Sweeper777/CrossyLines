@@ -10,9 +10,8 @@
 #endif
 #endif
 
-#import "SEDraggable.h"
-#import "SEDraggableLocation.h"
+#import "UIView+draggable.h"
 
-FOUNDATION_EXPORT double SEDraggableVersionNumber;
-FOUNDATION_EXPORT const unsigned char SEDraggableVersionString[];
+FOUNDATION_EXPORT double UIView_draggableVersionNumber;
+FOUNDATION_EXPORT const unsigned char UIView_draggableVersionString[];
 

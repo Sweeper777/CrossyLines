@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0920"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9A2A9D332223A535F08BCC3F7D6A49AD"
+               BlueprintIdentifier = "E4915114E8C16CD43F8D8B7693035568"
                BuildableName = "Pods_CrossyLines.framework"
                BlueprintName = "Pods-CrossyLines"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9A2A9D332223A535F08BCC3F7D6A49AD"
+            BlueprintIdentifier = "E4915114E8C16CD43F8D8B7693035568"
             BuildableName = "Pods_CrossyLines.framework"
             BlueprintName = "Pods-CrossyLines"
             ReferencedContainer = "container:Pods.xcodeproj">
