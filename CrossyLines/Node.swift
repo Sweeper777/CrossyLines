@@ -144,6 +144,18 @@ class Graph {
         }
         print(degrees)
     }
+    
+    func shuffle(within rect: CGRect) {
+        let inset: CGFloat = 15.0
+        let insetRect = rect.insetBy(dx: inset, dy: inset)
+        let coordinates = coordinatesOnEllipse(halfWidth: Double(insetRect.width / 2), halfHeight: Double(insetRect.height / 2), count: self.nodes.count)
+        zip(self.nodes.shuffled(), coordinates).forEach { pair in
+            pair.0.x = pair.1.x.f + inset
+            pair.0.y = pair.1.y.f + inset
+        }
+    }
+}
+
 fileprivate func coordinatesOnEllipse(halfWidth: Double, halfHeight: Double, count: Int) -> [(x: Double, y: Double)] {
     var coordinates = [(Double, Double)]()
     
