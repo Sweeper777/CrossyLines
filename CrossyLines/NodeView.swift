@@ -1,8 +1,7 @@
 import UIKit
-import SEDraggable
 
 @IBDesignable
-class NodeView: SEDraggable {
+class NodeView: UIView {
     override func draw(_ rect: CGRect) {
         let path = UIBezierPath(ovalIn: self.bounds.insetBy(dx: 1.5, dy: 1.5))
         path.lineWidth = 3
