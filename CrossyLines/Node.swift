@@ -142,7 +142,6 @@ class Graph {
                 break
             }
         }
-        print(degrees)
     }
     
     func shuffle(within rect: CGRect) {
