@@ -59,6 +59,10 @@ struct Connection: Hashable, CustomStringConvertible {
             return false
         }
         
+        if p2.samePointAs(p3) || p4.samePointAs(p1) || p2.samePointAs(p4) || p1.samePointAs(p3){
+            return false
+        }
+        
         let u = ((p3.x - p1.x)*(p4.y - p3.y) - (p3.y - p1.y)*(p4.x - p3.x))/d
         let v = ((p3.x - p1.x)*(p2.y - p1.y) - (p3.y - p1.y)*(p2.x - p1.x))/d
         if !(0.0...1.0).contains(u) || !(0.0...1.0).contains(v) {
