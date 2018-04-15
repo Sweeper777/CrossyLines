@@ -144,6 +144,38 @@ class Graph {
         }
         print(degrees)
     }
+fileprivate func coordinatesOnEllipse(halfWidth: Double, halfHeight: Double, count: Int) -> [(x: Double, y: Double)] {
+    var coordinates = [(Double, Double)]()
+    
+    var theta = 0.0
+    let twoPi = Double.pi * 2
+    let deltaTheta = 0.0001
+    let numIntegrals = Int(round(twoPi / deltaTheta))
+    var circ = 0.0
+    var dpt = 0.0
+    
+    for i in 0..<numIntegrals {
+        theta += Double(i) * deltaTheta
+        dpt = computeDpt(width: halfWidth, height: halfHeight, theta: theta)
+        circ += dpt
+    }
+    var nextPoint = 0
+    var run = 0.0
+    theta = 0.0
+    for _ in 0..<numIntegrals {
+        theta += deltaTheta;
+        let subIntegral = Double(count) * run / circ;
+        if Int(subIntegral) >= nextPoint {
+            let x = halfWidth * cos(theta)
+            let y = halfHeight * sin(theta)
+            coordinates.append((x, y))
+            nextPoint += 1
+        }
+        run += computeDpt(width: halfWidth, height: halfHeight, theta: theta)
+    }
+    return coordinates.map { ($0.0 + halfWidth, $0.1 + halfHeight) }
+}
+
 fileprivate func computeDpt(width: Double, height: Double, theta: Double) -> Double {
     let dpt_sin = pow(width * sin(theta), 2.0)
     let dpt_cos = pow(height * cos(theta), 2.0)
