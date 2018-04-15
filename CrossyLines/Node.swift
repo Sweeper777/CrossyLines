@@ -144,4 +144,8 @@ class Graph {
         }
         print(degrees)
     }
+fileprivate func computeDpt(width: Double, height: Double, theta: Double) -> Double {
+    let dpt_sin = pow(width * sin(theta), 2.0)
+    let dpt_cos = pow(height * cos(theta), 2.0)
+    return sqrt(dpt_sin + dpt_cos)
 }
