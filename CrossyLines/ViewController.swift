@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  CrossyLines
-//
-//  Created by Mulang Su on 2018/04/10.
-//  Copyright © 2018年 Mulang Su. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
