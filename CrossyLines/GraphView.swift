@@ -39,4 +39,16 @@ class GraphView: UIView {
         path.stroke()
     }
     
+    func syncDrawing() {
+        displayLink = CADisplayLink(target: self, selector: #selector(updateNodePositions))
+        displayLink.add(to: .main, forMode: .defaultRunLoopMode)
+    }
+    
+    @objc func updateNodePositions() {
+        for kvp in nodeViewsToNodes {
+            kvp.value.x = kvp.key.x + 15
+            kvp.value.y = kvp.key.y + 15
+        }
+        setNeedsDisplay()
+    }
 }
