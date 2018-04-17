@@ -12,6 +12,12 @@ class ViewController: UIViewController {
 //        addObserver(self, forKeyPath: "", options: [.new], context: nil)
 //        self.view.addSubview(nodeView)
         
+        DispatchQueue.main.async {
+            let graph = Graph(nodeCount: 20, maxDegree: 4)
+            graph.shuffle(within: self.graphView.bounds)
+            self.graphView.graph = graph
+            self.graphView.syncDrawing()
+        }
     }
 
     override func didReceiveMemoryWarning() {
