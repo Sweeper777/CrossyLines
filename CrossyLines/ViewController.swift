@@ -2,6 +2,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var graphView: GraphView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
