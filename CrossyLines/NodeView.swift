@@ -3,8 +3,10 @@ import UIKit
 @IBDesignable
 class NodeView: UIView {
     override func draw(_ rect: CGRect) {
-        let path = UIBezierPath(ovalIn: self.bounds.insetBy(dx: 1.5, dy: 1.5))
-        path.lineWidth = 3
+        let inset = self.bounds.width / 4
+        let insettedRect =  self.bounds.insetBy(dx: inset, dy: inset)
+        let path = UIBezierPath(ovalIn: insettedRect)
+        path.lineWidth = insettedRect.width / 10
         UIColor.yellow.setFill()
         UIColor.black.setStroke()
         path.fill()
