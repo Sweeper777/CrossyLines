@@ -153,6 +153,28 @@ class Graph {
             pair.0.y = pair.1.y.f + inset
         }
     }
+    
+    func checkIntersections() -> [Connection: Bool] {
+        var dict = [Connection: Bool]()
+        var tempConnections = connections
+        while true {
+            if let connectionToCheck = tempConnections.subtracting(dict.keys).first {
+                let intersections = Set(tempConnections.filter { connectionToCheck.intersects(with: $0) })
+                if intersections.isEmpty {
+                    dict[connectionToCheck] = false
+                    tempConnections.remove(connectionToCheck)
+                } else {
+                    dict[connectionToCheck] = true
+                    for connection in intersections {
+                        dict[connection] = true
+                    }
+                }
+            } else {
+                break
+            }
+        }
+        return dict
+    }
 }
 
 fileprivate func coordinatesOnEllipse(halfWidth: Double, halfHeight: Double, count: Int) -> [(x: Double, y: Double)] {
