@@ -6,6 +6,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        let nodeView = NodeView(frame: CGRect(x: 100, y: 100, width: 30, height: 30))
+//        nodeView.backgroundColor = .clear
+//        addObserver(self, forKeyPath: "", options: [.new], context: nil)
+//        self.view.addSubview(nodeView)
+        
     }
 
     override func didReceiveMemoryWarning() {
