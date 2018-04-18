@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,19 +16,116 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CrossyLines" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Os-kp-r3Q" customClass="GraphView" customModule="CrossyLines" customModuleProvider="target">
-                                <rect key="frame" x="67" y="75" width="240" height="423"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.95686274510000002" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Os-kp-r3Q" customClass="GraphView" customModule="CrossyLines" customModuleProvider="target">
+                                <rect key="frame" x="16" y="20" width="288" height="496"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4Os-kp-r3Q" secondAttribute="height" multiplier="1:1" id="uzj-s3-RCx"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="uzj-s3-RCx"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="uzj-s3-RCx"/>
+                                    </mask>
+                                </variation>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZI-Hb-bl3" customClass="CircleMenu" customModule="CircleMenu">
+                                <rect key="frame" x="272" y="516" width="32" height="32"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="kzU-Ex-4MT"/>
+                                    <constraint firstAttribute="height" constant="32" id="rdm-ZA-N0E"/>
+                                </constraints>
+                                <state key="normal" image="menu"/>
+                                <state key="selected" image="close"/>
+                                <state key="highlighted" image="close"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="buttonsCount">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="distance">
+                                        <real key="value" value="120"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="showDelay">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.95686274510000002" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4Os-kp-r3Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BhG-kP-OLt"/>
+                            <constraint firstItem="4Os-kp-r3Q" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Eqy-U7-key"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Os-kp-r3Q" secondAttribute="trailing" priority="750" constant="16" id="KDO-fS-JcG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4Os-kp-r3Q" secondAttribute="trailing" constant="16" id="PvA-oq-oFg"/>
+                            <constraint firstItem="4Os-kp-r3Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="750" constant="16" id="Rp0-Fn-ibn"/>
+                            <constraint firstItem="4Os-kp-r3Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="750" id="UlK-Ju-TRM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Os-kp-r3Q" secondAttribute="trailing" constant="16" id="Xji-Ud-4hX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wZI-Hb-bl3" secondAttribute="bottom" constant="20" id="b97-o1-M1E"/>
+                            <constraint firstItem="4Os-kp-r3Q" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bB0-e8-cHM"/>
+                            <constraint firstItem="4Os-kp-r3Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ehK-fL-FxV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4Os-kp-r3Q" secondAttribute="bottom" constant="20" id="hhC-Sz-TAI"/>
+                            <constraint firstItem="4Os-kp-r3Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iIY-aI-XYo"/>
+                            <constraint firstItem="4Os-kp-r3Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rmo-x2-7xo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4Os-kp-r3Q" secondAttribute="bottom" priority="750" constant="20" id="s6d-Mu-Aue"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4Os-kp-r3Q" secondAttribute="bottom" constant="52" id="seM-fK-Yem"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wZI-Hb-bl3" secondAttribute="trailing" constant="16" id="uGL-8g-XUd"/>
+                            <constraint firstItem="4Os-kp-r3Q" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yGf-Zi-Ca7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="KDO-fS-JcG"/>
+                                <exclude reference="PvA-oq-oFg"/>
+                                <exclude reference="hhC-Sz-TAI"/>
+                                <exclude reference="s6d-Mu-Aue"/>
+                                <exclude reference="BhG-kP-OLt"/>
+                                <exclude reference="Eqy-U7-key"/>
+                                <exclude reference="Rp0-Fn-ibn"/>
+                                <exclude reference="UlK-Ju-TRM"/>
+                                <exclude reference="bB0-e8-cHM"/>
+                                <exclude reference="iIY-aI-XYo"/>
+                                <exclude reference="yGf-Zi-Ca7"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <exclude reference="wZI-Hb-bl3"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="KDO-fS-JcG"/>
+                                <include reference="PvA-oq-oFg"/>
+                                <exclude reference="Xji-Ud-4hX"/>
+                                <include reference="hhC-Sz-TAI"/>
+                                <include reference="s6d-Mu-Aue"/>
+                                <exclude reference="seM-fK-Yem"/>
+                                <exclude reference="BhG-kP-OLt"/>
+                                <include reference="Eqy-U7-key"/>
+                                <include reference="Rp0-Fn-ibn"/>
+                                <include reference="UlK-Ju-TRM"/>
+                                <include reference="bB0-e8-cHM"/>
+                                <exclude reference="ehK-fL-FxV"/>
+                                <include reference="iIY-aI-XYo"/>
+                                <exclude reference="rmo-x2-7xo"/>
+                                <include reference="yGf-Zi-Ca7"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="circleMenu" destination="wZI-Hb-bl3" id="tTi-VW-61u"/>
                         <outlet property="graphView" destination="4Os-kp-r3Q" id="mDA-Bm-w8y"/>
                     </connections>
                 </viewController>
@@ -36,4 +134,8 @@
             <point key="canvasLocation" x="140" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="close" width="120" height="120"/>
+        <image name="menu" width="120" height="120"/>
+    </resources>
 </document>
