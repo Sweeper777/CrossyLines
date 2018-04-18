@@ -1,21 +1,24 @@
 PODS:
+  - CircleMenu (3.0.4)
   - Eureka (4.0.1)
   - SwiftRandom (1.0.0)
   - SwiftyUtils (2.0.0)
   - UIView+draggable (1.1.0)
 
 DEPENDENCIES:
+  - CircleMenu (= 3.0.4)
   - Eureka
   - SwiftRandom
   - SwiftyUtils
   - UIView+draggable
 
 SPEC CHECKSUMS:
+  CircleMenu: 0f589199f154e4ce93e0831ce3462950f59510fd
   Eureka: c8bd5cc07143b6f66268c208d28a246c99b41955
   SwiftRandom: 437275c63500ddf5a565cbd56996fb23f12cfc3d
   SwiftyUtils: ae914aa96b5672e9282904771e5e5b44d2e307d6
   UIView+draggable: ddfbeb6bdfdeba63d9ccf32dc9be2b66cc589717
 
-PODFILE CHECKSUM: e4c43bb482f7a9b05178c76283cf77bf8ee71023
+PODFILE CHECKSUM: a5404b008b9edfee6c72fe79337f6957704e131b
 
 COCOAPODS: 1.3.1

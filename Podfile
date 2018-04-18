@@ -10,5 +10,5 @@ target 'CrossyLines' do
   pod 'SwiftyUtils'
   pod 'Eureka'
   pod 'UIView+draggable'
-
+  pod 'CircleMenu', '3.0.5'
 end
