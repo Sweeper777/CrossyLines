@@ -1,8 +1,17 @@
 import UIKit
+import CircleMenu
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CircleMenuDelegate {
 
     @IBOutlet var graphView: GraphView!
+    @IBOutlet var circleMenu: CircleMenu!
+    
+    let items: [(icon: String, color: UIColor)] = [
+        ("restart", UIColor(red: 0.19, green: 0.57, blue: 1, alpha: 1)),
+        ("options", UIColor(red: 0.22, green: 0.74, blue: 0, alpha: 1)),
+        ("solution", UIColor(red: 0.96, green: 0.23, blue: 0.21, alpha: 1)),
+        ("help", UIColor(red: 0.51, green: 0.15, blue: 1, alpha: 1)),
+        ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
