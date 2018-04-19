@@ -27,6 +27,14 @@ class ViewController: UIViewController, CircleMenuDelegate {
             self.graphView.graph = graph
             self.graphView.syncDrawing()
         }
+        
+        if let menu = circleMenu {
+            menu.delegate = self
+            menu.startAngle = 270
+            menu.endAngle = 360
+            menu.layer.cornerRadius = menu.width / 2
+            menu.layer.borderWidth = 2
+        }
     }
 
     override func didReceiveMemoryWarning() {
