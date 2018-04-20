@@ -99,6 +99,16 @@ class Graph {
         return dict
     }
     
+    func createCopy() -> Graph {
+        let newNodes = nodes.map { $0.createCopy() }
+        var newConnections = Set<Connection>()
+        for connection in connections {
+            let index1 = nodes.index(of: connection.node1)!
+            let index2 = nodes.index(of: connection.node2)!
+            newConnections.insert(Connection(node1: newNodes[index1], node2: newNodes[index2]))
+        }
+        return Graph(nodes: newNodes, connections: newConnections)
+    }
 }
 
 fileprivate func coordinatesOnEllipse(halfWidth: Double, halfHeight: Double, count: Int) -> [(x: Double, y: Double)] {
