@@ -39,6 +39,10 @@ class Node: Hashable {
     func samePointAs(_ node: Node) -> Bool {
         return x == node.x && y == node.y
     }
+    
+    func createCopy() -> Node {
+        return Node(x: x, y: y)
+    }
 }
 
 struct Connection: Hashable, CustomStringConvertible {
