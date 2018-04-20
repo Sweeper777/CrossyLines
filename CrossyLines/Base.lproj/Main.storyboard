@@ -45,7 +45,6 @@
                                 </constraints>
                                 <state key="normal" image="menu"/>
                                 <state key="selected" image="close"/>
-                                <state key="highlighted" image="close"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="30"/>
@@ -64,9 +63,23 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoL-Op-rwo">
+                                <rect key="frame" x="16" y="516" width="32" height="32"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="1Rq-cr-wO0"/>
+                                    <constraint firstAttribute="width" constant="32" id="6fq-1w-DUy"/>
+                                </constraints>
+                                <color key="tintColor" red="0.82424587670000005" green="0.82424587670000005" blue="0.82424587670000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="new"/>
+                                <connections>
+                                    <action selector="newGraph" destination="BYZ-38-t0r" eventType="touchUpInside" id="0dC-EO-dKh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.95686274510000002" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="XoL-Op-rwo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="1PQ-vA-dvo"/>
                             <constraint firstItem="4Os-kp-r3Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BhG-kP-OLt"/>
                             <constraint firstItem="4Os-kp-r3Q" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Eqy-U7-key"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Os-kp-r3Q" secondAttribute="trailing" priority="750" constant="16" id="KDO-fS-JcG"/>
@@ -83,6 +96,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4Os-kp-r3Q" secondAttribute="bottom" priority="750" constant="20" id="s6d-Mu-Aue"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4Os-kp-r3Q" secondAttribute="bottom" constant="52" id="seM-fK-Yem"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wZI-Hb-bl3" secondAttribute="trailing" constant="16" id="uGL-8g-XUd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XoL-Op-rwo" secondAttribute="bottom" constant="20" id="vxo-Bi-UCo"/>
                             <constraint firstItem="4Os-kp-r3Q" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yGf-Zi-Ca7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -104,6 +118,7 @@
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="subviews">
                                 <exclude reference="wZI-Hb-bl3"/>
+                                <exclude reference="XoL-Op-rwo"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="KDO-fS-JcG"/>
@@ -127,6 +142,7 @@
                     <connections>
                         <outlet property="circleMenu" destination="wZI-Hb-bl3" id="tTi-VW-61u"/>
                         <outlet property="graphView" destination="4Os-kp-r3Q" id="mDA-Bm-w8y"/>
+                        <outlet property="newButton" destination="XoL-Op-rwo" id="FUs-4k-xPU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -135,7 +151,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="close" width="120" height="120"/>
-        <image name="menu" width="120" height="120"/>
+        <image name="close" width="10" height="10"/>
+        <image name="menu" width="10" height="10"/>
+        <image name="new" width="21" height="8"/>
     </resources>
 </document>
