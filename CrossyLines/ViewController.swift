@@ -72,5 +72,16 @@ class ViewController: UIViewController, CircleMenuDelegate {
     func circleMenu(_ circleMenu: CircleMenu, buttonDidSelected button: UIButton, atIndex: Int) {
         
     }
+    
+    @IBAction func newGraph() {
+        DispatchQueue.main.async {
+            [weak self] in
+            guard let `self` = self else { return }
+            self.graph = Graph(nodeCount: 20, maxDegree: 4)
+            self.solutionGraph = self.graph.createCopy()
+            self.graph.shuffle(within: self.graphView.bounds)
+            self.graphView.graph = self.graph
+        }
+    }
 }
 
