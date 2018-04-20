@@ -6,6 +6,9 @@ class ViewController: UIViewController, CircleMenuDelegate {
     @IBOutlet var graphView: GraphView!
     @IBOutlet var circleMenu: CircleMenu!
     
+    var graph : Graph!
+    var solutionGraph: Graph!
+    
     let items: [(icon: String, color: UIColor)] = [
         ("restart", UIColor(red: 0.19, green: 0.57, blue: 1, alpha: 1)),
         ("options", UIColor(red: 0.22, green: 0.74, blue: 0, alpha: 1)),
@@ -22,9 +25,12 @@ class ViewController: UIViewController, CircleMenuDelegate {
 //        self.view.addSubview(nodeView)
         
         DispatchQueue.main.async {
-            let graph = Graph(nodeCount: 20, maxDegree: 4)
-            graph.shuffle(within: self.graphView.bounds)
-            self.graphView.graph = graph
+            [weak self] in
+            guard let `self` = self else { return }
+            self.graph = Graph(nodeCount: 20, maxDegree: 4)
+            self.solutionGraph = self.graph.createCopy()
+            self.graph.shuffle(within: self.graphView.bounds)
+            self.graphView.graph = self.graph
             self.graphView.syncDrawing()
         }
         
