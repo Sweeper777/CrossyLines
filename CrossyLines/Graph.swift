@@ -99,6 +99,19 @@ class Graph {
         return dict
     }
     
+    func scale(toFit rect: CGRect) {
+        let maxX = nodes.map { $0.x }.max()!
+        let maxY = nodes.map { $0.y }.max()!
+        let dx = rect.width / maxX
+        let dy = rect.height / maxY
+        nodes.forEach {
+            $0.x *= dx
+            $0.y *= dy
+            $0.x += rect.x
+            $0.y += rect.y
+        }
+    }
+    
     func createCopy() -> Graph {
         let newNodes = nodes.map { $0.createCopy() }
         var newConnections = Set<Connection>()
