@@ -25,4 +25,15 @@ class NodeAnimation: CustomStringConvertible {
         step = totalLength / CGFloat(totalFrames)
     }
     
+    func nextFrame() {
+        currentFrame += 1
+        if totalLength != 0 {
+            let k1 = step * CGFloat(currentFrame)
+            let k2 = totalLength - k1
+            let x = (k1 * to.x + k2 * from.x) / totalLength
+            let y = (k1 * to.y + k2 * from.y) / totalLength
+            currentPosition = CGPoint(x: x, y: y)
+        }
+    }
+    
 }
