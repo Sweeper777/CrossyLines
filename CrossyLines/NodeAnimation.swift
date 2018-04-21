@@ -36,4 +36,7 @@ class NodeAnimation: CustomStringConvertible {
         }
     }
     
+    var description: String {
+        return "to: \(to), from: \(from), total frames: \(totalFrames), current frame: \(currentFrame), current position: \(currentPosition)"
+    }
 }
