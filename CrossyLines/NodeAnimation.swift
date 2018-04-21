@@ -7,4 +7,11 @@ class NodeAnimation: CustomStringConvertible {
     let step: CGFloat
     let totalLength: CGFloat
     
+    var currentFrame = 0
+    var currentPosition: CGPoint
+    
+    var completed: Bool {
+        return currentFrame >= totalFrames
+    }
+    
 }
