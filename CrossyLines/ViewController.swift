@@ -9,6 +9,7 @@ class ViewController: UIViewController, CircleMenuDelegate {
     
     var graph : Graph!
     var solutionGraph: Graph!
+    var solved = false
     
     let items: [(icon: String, color: UIColor)] = [
         ("restart", UIColor(red: 0.19, green: 0.57, blue: 1, alpha: 1)),
