@@ -58,4 +58,11 @@ class GraphView: UIView {
         }
         setNeedsDisplay()
     }
+    
+    func animate(to graph: Graph, frameCount: Int) {
+        subviews.forEach { $0.setDraggable(false) }
+        animations = zip(self.subviews, graph.nodes).map {
+            NodeAnimation(from: $0.0.frame.origin, to: CGPoint(x: $0.1.x - 15, y: $0.1.y - 15), totalFrames: frameCount)
+        }
+    }
 }
