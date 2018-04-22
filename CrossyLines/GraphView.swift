@@ -6,6 +6,7 @@ class GraphView: UIView {
     private var nodeViewsToNodes: [NodeView: Node] = [:]
     private var displayLink: CADisplayLink!
     
+    private var animations = [NodeAnimation]()
     var graph: Graph! {
         didSet {
             self.subviews.forEach { $0.removeFromSuperview() }
