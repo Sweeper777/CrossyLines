@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0920"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "401112E6CA15A4F17FE702D2822674FD"
+               BlueprintIdentifier = "8CFAC352CAA25F8F4EE0D4452026CBE0"
                BuildableName = "UIView_draggable.framework"
                BlueprintName = "UIView+draggable"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "401112E6CA15A4F17FE702D2822674FD"
+            BlueprintIdentifier = "8CFAC352CAA25F8F4EE0D4452026CBE0"
             BuildableName = "UIView_draggable.framework"
             BlueprintName = "UIView+draggable"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -11,4 +11,5 @@ target 'CrossyLines' do
   pod 'Eureka'
   pod 'UIView+draggable'
   pod 'CircleMenu', '3.0.6'
+  pod 'DBNumberedSlider'
 end

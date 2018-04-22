@@ -1,0 +1,6 @@
+framework module DBNumberedSlider {
+  umbrella header "DBNumberedSlider-umbrella.h"
+
+  export *
+  module * { export * }
+}
