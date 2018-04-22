@@ -5,6 +5,7 @@ class ViewController: UIViewController, CircleMenuDelegate {
 
     @IBOutlet var graphView: GraphView!
     @IBOutlet var circleMenu: CircleMenu!
+    @IBOutlet var newButton: UIButton!
     
     var graph : Graph!
     var solutionGraph: Graph!
