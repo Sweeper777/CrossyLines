@@ -42,6 +42,12 @@ class ViewController: UIViewController, CircleMenuDelegate {
             menu.layer.cornerRadius = menu.width / 2
             menu.layer.borderWidth = 2
         }
+        
+        if let newButton = self.newButton {
+            newButton.layer.cornerRadius = newButton.width / 2
+            newButton.layer.borderWidth = 2
+            newButton.setImage(#imageLiteral(resourceName: "new").withRenderingMode(.alwaysTemplate), for: .highlighted)
+        }
     }
 
     override func didReceiveMemoryWarning() {
