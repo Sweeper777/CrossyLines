@@ -52,6 +52,17 @@ class GraphView: UIView {
     }
     
     @objc func updateNodePositions() {
+        if animations.isNotEmpty {
+            animations.forEach { $0.nextFrame() }
+            zip(subviews, animations).forEach({ (tuple) in
+                tuple.0.frame.origin = tuple.1.currentPosition
+            })
+            if animations.contains(where: { $0.completed }) {
+                animations.removeAll()
+                subviews.forEach { $0.enableDragging() }
+            }
+        }
+        
         for kvp in nodeViewsToNodes {
             kvp.value.x = kvp.key.x + 15
             kvp.value.y = kvp.key.y + 15
