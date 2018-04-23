@@ -103,16 +103,16 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CircleMenu/CircleMenu.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/DBNumberedSlider/DBNumberedSlider.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Stepperier/Stepperier.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftRandom/SwiftRandom.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyUtils/SwiftyUtils.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/UIView+draggable/UIView_draggable.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CircleMenu/CircleMenu.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/DBNumberedSlider/DBNumberedSlider.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Stepperier/Stepperier.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftRandom/SwiftRandom.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyUtils/SwiftyUtils.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/UIView+draggable/UIView_draggable.framework"

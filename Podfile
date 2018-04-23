@@ -11,5 +11,5 @@ target 'CrossyLines' do
   pod 'Eureka'
   pod 'UIView+draggable'
   pod 'CircleMenu', '3.0.6'
-  pod 'DBNumberedSlider'
+  pod 'Stepperier', :git => 'https://github.com/lucaji/Stepperier.git'
 end

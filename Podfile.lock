@@ -1,27 +1,36 @@
 PODS:
   - CircleMenu (3.0.6)
-  - DBNumberedSlider (1.0.0)
   - Eureka (4.1.1)
+  - Stepperier (1.1.0)
   - SwiftRandom (1.0.0)
   - SwiftyUtils (2.0.0)
   - UIView+draggable (1.1.0)
 
 DEPENDENCIES:
   - CircleMenu (= 3.0.6)
-  - DBNumberedSlider
   - Eureka
+  - Stepperier (from `https://github.com/lucaji/Stepperier.git`)
   - SwiftRandom
   - SwiftyUtils
   - UIView+draggable
 
+EXTERNAL SOURCES:
+  Stepperier:
+    :git: https://github.com/lucaji/Stepperier.git
+
+CHECKOUT OPTIONS:
+  Stepperier:
+    :commit: b1f6875919c32bf110ea8ff0f5196a91da99ca1f
+    :git: https://github.com/lucaji/Stepperier.git
+
 SPEC CHECKSUMS:
   CircleMenu: 743ac815475e8e40e8848d2954fa7f7263d9f78d
-  DBNumberedSlider: 61840fe651851007ba7f228128c42b1903b4cd47
   Eureka: b88fb930e42c79f8c03c373d0fcdc28c1d6c50ed
+  Stepperier: 1ee32a082a2685be6852fe11457cff99d1e8453b
   SwiftRandom: 437275c63500ddf5a565cbd56996fb23f12cfc3d
   SwiftyUtils: ae914aa96b5672e9282904771e5e5b44d2e307d6
   UIView+draggable: ddfbeb6bdfdeba63d9ccf32dc9be2b66cc589717
 
-PODFILE CHECKSUM: 07e2a3fe1929b5a02e0ae94627571b435c3349b8
+PODFILE CHECKSUM: ee8aa5c267473248be7112cc4cf04e8ce11fb471
 
 COCOAPODS: 1.3.1

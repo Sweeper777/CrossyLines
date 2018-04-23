@@ -10,8 +10,7 @@
 #endif
 #endif
 
-#import "DBNumberedSlider.h"
 
-FOUNDATION_EXPORT double DBNumberedSliderVersionNumber;
-FOUNDATION_EXPORT const unsigned char DBNumberedSliderVersionString[];
+FOUNDATION_EXPORT double StepperierVersionNumber;
+FOUNDATION_EXPORT const unsigned char StepperierVersionString[];
 
