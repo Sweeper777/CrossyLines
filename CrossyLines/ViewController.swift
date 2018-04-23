@@ -78,6 +78,16 @@ class ViewController: UIViewController, CircleMenuDelegate {
     }
     
     func circleMenu(_ circleMenu: CircleMenu, buttonDidSelected button: UIButton, atIndex: Int) {
+        switch atIndex {
+        case 2:
+            let insettedRect = self.graphView.bounds.insetBy(dx: 15, dy: 15)
+            let graphCopy = solutionGraph.createCopy()
+            graphCopy.scale(toFit: insettedRect)
+            self.graphView.animate(to: graphCopy, frameCount: 120)
+            self.solved = true
+        default:
+            break
+        }
         
     }
     
