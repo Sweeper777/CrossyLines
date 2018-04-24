@@ -21,6 +21,10 @@ class GraphView: UIView {
                     nodeView.backgroundColor = .clear
                     nodeView.enableDragging()
                     nodeView.cagingArea = self.bounds
+                    nodeView.draggingStartedBlock = { [weak self] view in
+                        self?.delegate?.graphViewDidStartDragging(nodeView: view as! NodeView) }
+                    nodeView.draggingEndedBlock = { [weak self] view in
+                        self?.delegate?.graphViewDidEndDragging(nodeView: view as! NodeView) }
                     self.addSubview(nodeView)
                     nodeViewsToNodes[nodeView] = node
                 }
