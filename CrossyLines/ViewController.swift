@@ -1,7 +1,7 @@
 import UIKit
 import CircleMenu
 
-class ViewController: UIViewController, CircleMenuDelegate {
+class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate {
 
     @IBOutlet var graphView: GraphView!
     @IBOutlet var circleMenu: CircleMenu!
@@ -93,6 +93,19 @@ class ViewController: UIViewController, CircleMenuDelegate {
             break
         }
         
+    }
+    
+    func graphViewDidStartDragging(nodeView: NodeView) {
+        circleMenu?.hideButtons(circleMenu.duration)
+    }
+    
+    func graphViewDidEndDragging(nodeView: NodeView) {
+        if !solved && !graph.checkIntersections().values.contains(true) {
+            solved = true
+            let alert = UIAlertController(title: "Congratulations!", message: "You solved the puzzle! Tap on \"NEW\" to get a new one!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
     }
     
     @IBAction func newGraph() {
