@@ -26,13 +26,13 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate {
 //        addObserver(self, forKeyPath: "", options: [.new], context: nil)
 //        self.view.addSubview(nodeView)
         
-        DispatchQueue.main.async {
-            [weak self] in
-            guard let `self` = self else { return }
+        DispatchQueue.main.async { [weak self] in
+            guard let `self` = self else { return}
             self.graph = Graph(nodeCount: 20, maxDegree: 4)
             self.solutionGraph = self.graph.createCopy()
             self.graph.shuffle(within: self.graphView.bounds)
             self.graphView.graph = self.graph
+            self.graphView.delegate = self
             self.graphView.syncDrawing()
         }
         
