@@ -136,6 +136,15 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate {
         } else {
             safeArea = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         }
+        let circleMenuX: CGFloat
+        let circleMenuY: CGFloat
+        if graphView.x > graphView.y {
+            circleMenuX = safeArea.left + 8
+            circleMenuY = view.bounds.midY - 32
+        } else {
+            circleMenuX = view.bounds.midX - 32
+            circleMenuY = safeArea.top + 8
+        }
     }
 }
 
