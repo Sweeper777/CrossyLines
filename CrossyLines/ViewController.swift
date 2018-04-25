@@ -145,6 +145,22 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate {
             circleMenuX = view.bounds.midX - 32
             circleMenuY = safeArea.top + 8
         }
+        circleMenu = CircleMenu(frame: CGRect(x: circleMenuX, y: circleMenuY, width: 64, height: 64), normalIcon: "menu-large", selectedIcon: "close-large")
+        circleMenu.buttonsCount = 4
+        circleMenu.delegate = self
+        view.addSubview(circleMenu)
+        if graphView.x > graphView.y {
+            circleMenu.startAngle = 0
+            circleMenu.endAngle = 180
+        } else {
+            circleMenu.startAngle = 90
+            circleMenu.endAngle = 270
+        }
+        circleMenu.layer.cornerRadius = circleMenu.width / 2
+        circleMenu.layer.borderWidth = 2
+        circleMenu.duration = 0.5
+        circleMenu.backgroundColor = .white
+        circleMenu.distance *= 2
     }
 }
 
