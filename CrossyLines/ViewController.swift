@@ -123,5 +123,19 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate {
             
         }
     }
+    
+    func repositionViews() {
+        guard traitCollection.verticalSizeClass == .regular && traitCollection.horizontalSizeClass == .regular else { return }
+        
+        newButton.removeFromSuperview()
+        circleMenu.removeFromSuperview()
+        
+        let safeArea: UIEdgeInsets
+        if #available(iOS 11.0, *) {
+            safeArea = view.safeAreaInsets
+        } else {
+            safeArea = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        }
+    }
 }
 
