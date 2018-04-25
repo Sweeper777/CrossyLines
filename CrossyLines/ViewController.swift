@@ -161,6 +161,15 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate {
         circleMenu.duration = 0.5
         circleMenu.backgroundColor = .white
         circleMenu.distance *= 2
+        
+        let newButtonFrame: CGRect
+        if graphView.x > graphView.y {
+            let newButtonX = view.width - safeArea.right - 8 - 64
+            newButtonFrame = CGRect(x: newButtonX, y: circleMenuY, width: 64, height: 64)
+        } else {
+            let newButtonY = view.height - safeArea.bottom - 8 - 64
+            newButtonFrame = CGRect(x: circleMenuX, y: newButtonY, width: 64, height: 64)
+        }
     }
 }
 
