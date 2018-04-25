@@ -111,6 +111,7 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate {
     }
     
     @IBAction func newGraph() {
+        circleMenu?.hideButtons(circleMenu.duration)
         DispatchQueue.main.async {
             [weak self] in
             guard let `self` = self else { return }
@@ -118,6 +119,8 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate {
             self.solutionGraph = self.graph.createCopy()
             self.graph.shuffle(within: self.graphView.bounds)
             self.graphView.graph = self.graph
+            self.solved = false
+            
         }
     }
 }
