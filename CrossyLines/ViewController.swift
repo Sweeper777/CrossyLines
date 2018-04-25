@@ -170,6 +170,16 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate {
             let newButtonY = view.height - safeArea.bottom - 8 - 64
             newButtonFrame = CGRect(x: circleMenuX, y: newButtonY, width: 64, height: 64)
         }
+        newButton = UIButton(type: .custom)
+        newButton.frame = newButtonFrame
+        newButton.setImage(#imageLiteral(resourceName: "new-large"), for: .normal)
+        newButton.layer.cornerRadius = newButton.width / 2
+        newButton.layer.borderWidth = 2
+        newButton.setImage(#imageLiteral(resourceName: "new-large").withRenderingMode(.alwaysTemplate), for: .highlighted)
+        newButton.addTarget(self, action: #selector(newGraph), for: .touchUpInside)
+        newButton.backgroundColor = .white
+        newButton.tintColor = UIColor(hex: "d2d2d2")
+        view.addSubview(newButton)
     }
 }
 
