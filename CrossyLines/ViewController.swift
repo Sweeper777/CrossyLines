@@ -181,5 +181,10 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate {
         newButton.tintColor = UIColor(hex: "d2d2d2")
         view.addSubview(newButton)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        repositionViews()
+    }
 }
 
