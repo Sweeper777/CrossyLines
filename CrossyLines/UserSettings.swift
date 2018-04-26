@@ -12,4 +12,10 @@ class UserSettings {
         colorCodeConnections = defaults.has(key: "colorCodeConnections") ? defaults.bool(forKey: "colorCodeConnections") : true
     }
     
+    static func saveUserSettings() {
+        let defaults = UserDefaults.standard
+        defaults.set(nodeCount, forKey: "nodeCount")
+        defaults.set(maxConnectionCount, forKey: "maxConnectionCount")
+        defaults.set(colorCodeConnections, forKey: "colorCodeConnections")
+    }
 }
