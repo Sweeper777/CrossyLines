@@ -186,5 +186,13 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate {
         super.viewDidAppear(animated)
         repositionViews()
     }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        DispatchQueue.main.async { [weak self] in
+            guard let `self` = self else { return }
+            self.repositionViews()
+        }
+    }
 }
 
