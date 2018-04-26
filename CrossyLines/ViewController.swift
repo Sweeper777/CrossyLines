@@ -85,6 +85,8 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate {
             let originalGraph = graph.createCopy()
             originalGraph.shuffle(within: graphView.bounds)
             graphView.animate(to: originalGraph, frameCount: 30)
+        case 1:
+            performSegue(withIdentifier: "showSettings", sender: nil)
         case 2:
             let insettedRect = self.graphView.bounds.insetBy(dx: 15, dy: 15)
             let graphCopy = solutionGraph.createCopy()
