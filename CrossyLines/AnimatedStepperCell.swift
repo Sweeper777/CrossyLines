@@ -14,4 +14,21 @@ class AnimatedStepperCell: Cell<Int>, CellType {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
     
+    @IBAction func stepperValueChanged(){
+        row.value = stepper.value
+        row.updateCell()
+    }
+    
+    override func update() {
+        if let value = row.value {
+            stepper.value = value
+        }
+    }
+    
+    override func setup() {
+        stepper.valueBackgroundColor = UIColor.blue.lighter()
+        stepper.operationSymbolsColor = .white
+        stepper.backgroundColor = UIColor.blue.darker()
+        stepper.tintColor = .white
+    }
 }
