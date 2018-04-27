@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="50" id="wge-XP-78V" customClass="AnimatedStepperCell" customModule="CrossyLines" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wge-XP-78V" id="3RH-Rf-iOB">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h4c-Co-ySe" customClass="Stepperier" customModule="Stepperier">
+                        <rect key="frame" x="242" y="10" width="117" height="28"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="28" id="TgQ-JU-Hha"/>
+                            <constraint firstAttribute="width" constant="117" id="bJs-rg-5Uf"/>
+                        </constraints>
+                        <connections>
+                            <action selector="stepperValueChanged" destination="wge-XP-78V" eventType="valueChanged" id="evK-t6-ed8"/>
+                        </connections>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8X0-H2-0zM">
+                        <rect key="frame" x="16" y="14" width="218" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="h4c-Co-ySe" secondAttribute="bottom" constant="11.5" id="0pJ-xd-BXx"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="8X0-H2-0zM" secondAttribute="bottom" constant="4" id="Eh7-6a-Xqu"/>
+                    <constraint firstItem="8X0-H2-0zM" firstAttribute="leading" secondItem="3RH-Rf-iOB" secondAttribute="leadingMargin" id="Qev-NX-rEc"/>
+                    <constraint firstItem="h4c-Co-ySe" firstAttribute="leading" secondItem="8X0-H2-0zM" secondAttribute="trailing" constant="8" id="YC1-M8-Zq3"/>
+                    <constraint firstItem="h4c-Co-ySe" firstAttribute="top" secondItem="3RH-Rf-iOB" secondAttribute="top" constant="10" id="ekk-XC-qBT"/>
+                    <constraint firstAttribute="trailing" secondItem="h4c-Co-ySe" secondAttribute="trailing" constant="16" id="f0e-fV-5Ik"/>
+                    <constraint firstItem="8X0-H2-0zM" firstAttribute="top" secondItem="3RH-Rf-iOB" secondAttribute="topMargin" constant="3" id="kFZ-3U-yJJ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="label" destination="8X0-H2-0zM" id="8bu-ws-w5R"/>
+                <outlet property="stepper" destination="h4c-Co-ySe" id="mPh-UI-FHo"/>
+            </connections>
+            <point key="canvasLocation" x="131.5" y="15"/>
+        </tableViewCell>
+    </objects>
+</document>
