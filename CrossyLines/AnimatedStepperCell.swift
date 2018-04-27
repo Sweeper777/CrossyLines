@@ -32,3 +32,10 @@ class AnimatedStepperCell: Cell<Int>, CellType {
         stepper.tintColor = .white
     }
 }
+
+final class AnimatedStepperRow: Row<AnimatedStepperCell>, RowType {
+    required public init(tag: String?) {
+        super.init(tag: tag)
+        cellProvider = CellProvider<AnimatedStepperCell>(nibName: "AnimatedStepperCell")
+    }
+}
