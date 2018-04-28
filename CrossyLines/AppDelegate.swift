@@ -7,16 +7,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        UserSettings.loadUserSettings()
         return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
+        UserSettings.saveUserSettings()
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
+        
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
+        UserSettings.loadUserSettings()
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
