@@ -17,4 +17,9 @@ class SettingsController: FormViewController {
             UserSettings.nodeCount = row.value ?? UserSettings.nodeCount
         })
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        UserSettings.saveUserSettings()
+    }
 }
