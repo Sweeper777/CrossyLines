@@ -13,4 +13,8 @@ class SettingsController: FormViewController {
             row.cell.stepper.maximumValue = 40
             row.value = UserSettings.nodeCount
         }
+        .onChange({ (row) in
+            UserSettings.nodeCount = row.value ?? UserSettings.nodeCount
+        })
+    }
 }
