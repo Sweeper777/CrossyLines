@@ -6,7 +6,8 @@ class SettingsController: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        form +++ AnimatedStepperRow("nodeCount") {
+        form +++ Section(footer: "Drag the number handle to the left or right to change it!")
+        <<< AnimatedStepperRow("nodeCount") {
             row in
             row.cell.label.text = "Number of nodes"
             row.cell.stepper.minimumValue = 7
