@@ -11,5 +11,8 @@ target 'CrossyLines' do
   pod 'Eureka'
   pod 'UIView+draggable'
   pod 'CircleMenu', '3.0.6'
+  pod 'SCLAlertView-Objective-C'
+  pod 'Kamishibai'
   pod 'Stepperier', :git => 'https://github.com/lucaji/Stepperier.git'
+  pod 'MYBlurIntroductionView'
 end

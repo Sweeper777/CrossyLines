@@ -104,6 +104,9 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CircleMenu/CircleMenu.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Kamishibai/Kamishibai.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MYBlurIntroductionView/MYBlurIntroductionView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SCLAlertView-Objective-C/SCLAlertView_Objective_C.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Stepperier/Stepperier.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftRandom/SwiftRandom.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyUtils/SwiftyUtils.framework"
@@ -112,6 +115,9 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CircleMenu/CircleMenu.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Kamishibai/Kamishibai.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MYBlurIntroductionView/MYBlurIntroductionView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SCLAlertView-Objective-C/SCLAlertView_Objective_C.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Stepperier/Stepperier.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftRandom/SwiftRandom.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyUtils/SwiftyUtils.framework"
