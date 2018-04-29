@@ -24,6 +24,10 @@ class SettingsController: FormViewController {
             row.cell.stepper.maximumValue = 8
             row.value = UserSettings.maxConnectionCount
         }
+        .onChange({ (row) in
+            UserSettings.maxConnectionCount = row.value ?? UserSettings.maxConnectionCount
+        })
+        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
