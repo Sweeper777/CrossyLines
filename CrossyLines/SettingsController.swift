@@ -17,6 +17,13 @@ class SettingsController: FormViewController {
         .onChange({ (row) in
             UserSettings.nodeCount = row.value ?? UserSettings.nodeCount
         })
+        <<< AnimatedStepperRow("maxConnections") {
+            row in
+            row.cell.label.text = "Max Connections"
+            row.cell.stepper.minimumValue = 4
+            row.cell.stepper.maximumValue = 8
+            row.value = UserSettings.maxConnectionCount
+        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
