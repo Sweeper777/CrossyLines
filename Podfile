@@ -15,4 +15,5 @@ target 'CrossyLines' do
   pod 'Kamishibai'
   pod 'Stepperier', :git => 'https://github.com/lucaji/Stepperier.git'
   pod 'MYBlurIntroductionView'
+  pod 'NYXImagesKit'
 end

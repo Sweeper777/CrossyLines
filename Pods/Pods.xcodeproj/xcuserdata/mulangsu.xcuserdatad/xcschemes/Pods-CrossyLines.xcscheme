@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "91C5EC9F9B9353A2AC84894A8A14B49F"
+               BlueprintIdentifier = "6D91D4FAA10C381743595D9721D12421"
                BuildableName = "Pods_CrossyLines.framework"
                BlueprintName = "Pods-CrossyLines"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "91C5EC9F9B9353A2AC84894A8A14B49F"
+            BlueprintIdentifier = "6D91D4FAA10C381743595D9721D12421"
             BuildableName = "Pods_CrossyLines.framework"
             BlueprintName = "Pods-CrossyLines"
             ReferencedContainer = "container:Pods.xcodeproj">

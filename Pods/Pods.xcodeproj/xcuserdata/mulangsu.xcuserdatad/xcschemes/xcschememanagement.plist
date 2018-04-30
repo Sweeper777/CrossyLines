@@ -32,47 +32,54 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>Pods-CrossyLines.xcscheme</key>
+		<key>NYXImagesKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
-		<key>SCLAlertView-Objective-C.xcscheme</key>
+		<key>Pods-CrossyLines.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
-		<key>Stepperier.xcscheme</key>
+		<key>SCLAlertView-Objective-C.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
-		<key>SwiftRandom.xcscheme</key>
+		<key>Stepperier.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
-		<key>SwiftyUtils.xcscheme</key>
+		<key>SwiftRandom.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>8</integer>
 		</dict>
-		<key>UIView+draggable.xcscheme</key>
+		<key>SwiftyUtils.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>9</integer>
+		</dict>
+		<key>UIView+draggable.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>10</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>

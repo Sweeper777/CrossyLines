@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6C4409AEF9F3664A4CD0286C7F9286C6"
-               BuildableName = "Stepperier.framework"
-               BlueprintName = "Stepperier"
+               BlueprintIdentifier = "9F668D9BBB3436022078C4FD940A646E"
+               BuildableName = "NYXImagesKit.framework"
+               BlueprintName = "NYXImagesKit"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6C4409AEF9F3664A4CD0286C7F9286C6"
-            BuildableName = "Stepperier.framework"
-            BlueprintName = "Stepperier"
+            BlueprintIdentifier = "9F668D9BBB3436022078C4FD940A646E"
+            BuildableName = "NYXImagesKit.framework"
+            BlueprintName = "NYXImagesKit"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
