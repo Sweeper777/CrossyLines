@@ -33,6 +33,9 @@ class SettingsController: FormViewController {
             row.title = "Color Code Connections"
             row.value = UserSettings.colorCodeConnections
         }
+        .onChange({ (row) in
+            UserSettings.colorCodeConnections = row.value ?? UserSettings.colorCodeConnections
+        })
     }
     
     override func viewDidDisappear(_ animated: Bool) {
