@@ -177,7 +177,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="oIH-Ay-NDD"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Settings" id="4BO-bL-IUS"/>
+                    <navigationItem key="navigationItem" title="Settings" id="4BO-bL-IUS">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="rjL-1O-4lU">
+                            <color key="tintColor" red="0.59215686274509804" green="0.53725490196078429" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="done" destination="VAN-Qt-bos" id="KIe-39-JmK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ITD-rC-dED" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
