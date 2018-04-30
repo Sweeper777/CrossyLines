@@ -28,6 +28,11 @@ class SettingsController: FormViewController {
             UserSettings.maxConnectionCount = row.value ?? UserSettings.maxConnectionCount
         })
         
+        form +++ SwitchRow("colorCodeConnections") {
+            row in
+            row.title = "Color Code Connections"
+            row.value = UserSettings.colorCodeConnections
+        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
