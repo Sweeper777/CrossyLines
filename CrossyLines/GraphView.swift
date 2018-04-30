@@ -44,10 +44,14 @@ class GraphView: UIView {
             path.lineWidth = 2
             path.move(to: CGPoint(x: connection.node1.x, y: connection.node1.y))
             path.addLine(to: CGPoint(x: connection.node2.x, y: connection.node2.y))
-            if intersectionDict[connection] ?? false {
-                UIColor.red.setStroke()
+            if UserSettings.colorCodeConnections {
+                if intersectionDict[connection] ?? false {
+                    UIColor.red.setStroke()
+                } else {
+                    UIColor.green.darker().setStroke()
+                }
             } else {
-                UIColor.green.darker().setStroke()
+                UIColor.black.setStroke()
             }
             path.stroke()
         }
