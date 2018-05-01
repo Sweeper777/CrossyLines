@@ -1,6 +1,7 @@
 import UIKit
 import CircleMenu
 import SCLAlertView_Objective_C
+import Kamishibai
 
 class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate {
 
@@ -12,6 +13,9 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate {
     var solutionGraph: Graph!
     var solved = false
     
+    lazy var kamishibai: Kamishibai = {
+        return Kamishibai(initialViewController: self)
+    }()
     let items: [(icon: String, color: UIColor)] = [
         ("restart", UIColor(red: 0.19, green: 0.57, blue: 1, alpha: 1)),
         ("options", UIColor(red: 0.22, green: 0.74, blue: 0, alpha: 1)),
