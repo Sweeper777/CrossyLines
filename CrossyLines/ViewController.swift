@@ -1,5 +1,6 @@
 import UIKit
 import CircleMenu
+import SCLAlertView_Objective_C
 
 class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate {
 
@@ -100,9 +101,8 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate {
     func graphViewDidEndDragging(nodeView: NodeView) {
         if !solved && !graph.checkIntersections().values.contains(true) {
             solved = true
-            let alert = UIAlertController(title: "Congratulations!", message: "You solved the puzzle! Tap on \"NEW\" to get a new one!", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            present(alert, animated: true, completion: nil)
+            
+            SCLAlertView().showSuccess(self, title: "Congratulations!", subTitle: "You completed the puzzle! Tap \"NEW\" to do another one!", closeButtonTitle: "OK", duration: 0)
         }
     }
     
