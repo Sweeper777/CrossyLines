@@ -42,4 +42,8 @@ class SettingsController: FormViewController {
         super.viewDidDisappear(animated)
         UserSettings.saveUserSettings()
     }
+    
+    @IBAction func done() {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
