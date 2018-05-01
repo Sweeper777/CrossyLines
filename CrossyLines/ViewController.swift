@@ -185,6 +185,7 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         repositionViews()
+            showTutorial()
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
