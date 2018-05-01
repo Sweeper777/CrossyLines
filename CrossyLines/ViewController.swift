@@ -197,13 +197,13 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate {
     }
     
     func showTutorial() {
-        kamishibai.append(KamishibaiScene(scene: { [weak self] (scene) in
-            guard let `self` = self else { return }
-            scene.kamishibai?.focus.on(view: self.graphView, focus: Focus.Rect(frame: self.graphView.frame), completion: nil)
-            scene.kamishibai?.focus.addCustomView(view: GuideLabel("Welcome to KnottyLines!"), position: .center(self.graphView.center))
-            scene.fulfillWhenTapFocus()
-        }))
-        kamishibai.startStory()
+//        kamishibai.append(KamishibaiScene(scene: { [weak self] (scene) in
+//            guard let `self` = self else { return }
+//            scene.kamishibai?.focus.on(view: self.graphView, focus: Focus.Rect(frame: self.graphView.frame), completion: nil)
+//            scene.kamishibai?.focus.addCustomView(view: GuideLabel("Welcome to KnottyLines!"), position: .center(self.graphView.center))
+//            scene.fulfillWhenTapFocus()
+//        }))
+//        kamishibai.startStory()
     }
 }
 
