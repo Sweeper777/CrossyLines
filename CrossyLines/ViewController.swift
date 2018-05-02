@@ -207,6 +207,11 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate {
 //            scene.fulfillWhenTapFocus()
 //        }))
 //        kamishibai.startStory()
+        if cover == nil {
+            cover = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
+            cover.frame = view.bounds
+        }
+        view.addSubview(cover)
     }
 }
 
