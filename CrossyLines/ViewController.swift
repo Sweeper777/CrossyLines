@@ -16,6 +16,9 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate {
     lazy var kamishibai: Kamishibai = {
         return Kamishibai(initialViewController: self)
     }()
+    var cover: UIVisualEffectView!
+    var introView: MYBlurIntroductionView!
+    
     let items: [(icon: String, color: UIColor)] = [
         ("restart", UIColor(red: 0.19, green: 0.57, blue: 1, alpha: 1)),
         ("options", UIColor(red: 0.22, green: 0.74, blue: 0, alpha: 1)),
