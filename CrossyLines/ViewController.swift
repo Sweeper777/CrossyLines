@@ -217,6 +217,7 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate {
         let panel3 = MYIntroductionPanel(frame: cover.bounds, title: "How to Play", description: "You need to move the nodes so that no line intersect any other lines, just like this:", image: #imageLiteral(resourceName: "tutorial-finishedpuzzle").scale(toFit: cover.frame.insetBy(dx: 30, dy: 30).size))!
         let panel4 = MYIntroductionPanel(frame: cover.bounds, title: "New Puzzle", description: "You can tap on this button to randomly generate a new puzzle!", image: #imageLiteral(resourceName: "tutorial-newbutton"))!
         let panel5 = MYIntroductionPanel(frame: cover.bounds, title: "Menu", description: "This is the menu button. Tap on it and more buttons will show up. They will be explained in the next page!", image: #imageLiteral(resourceName: "tutorial-menubutton"))!
+        let panel6 = MYIntroductionPanel(frame: cover.bounds, title: "Menu", description: "From bottom left to top right:\nRestart the puzzle\nSettings\nShow a solution\nShow this tutorial", image: #imageLiteral(resourceName: "tutorial-menubuttons").scale(toFit: cover.frame.insetBy(dx: 30, dy: 30).size))!
     }
 }
 
