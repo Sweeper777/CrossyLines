@@ -214,6 +214,7 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate {
         view.addSubview(cover)
         let panel1 = MYIntroductionPanel(frame: cover.bounds, title: "Welcome!", description: "Knotty Lines a simple puzzle game for killing time. Go to the next page for how to play!", image: #imageLiteral(resourceName: "tutorial-appicon").scale(toFit: cover.frame.insetBy(dx: 30, dy: 30).size))!
         let panel2 = MYIntroductionPanel(frame: cover.bounds, title: "How to Play", description: "The puzzle starts off like this, with these little yellow dots called \"nodes\" that are connected by lines. The lines intersect each other.", image: #imageLiteral(resourceName: "tutorial-originalpuzzle").scale(toFit: cover.frame.insetBy(dx: 30, dy: 30).size))!
+        let panel3 = MYIntroductionPanel(frame: cover.bounds, title: "How to Play", description: "You need to move the nodes so that no line intersect any other lines, just like this:", image: #imageLiteral(resourceName: "tutorial-finishedpuzzle").scale(toFit: cover.frame.insetBy(dx: 30, dy: 30).size))!
     }
 }
 
