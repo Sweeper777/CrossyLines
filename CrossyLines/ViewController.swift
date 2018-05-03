@@ -212,6 +212,7 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate {
             cover.frame = view.bounds
         }
         view.addSubview(cover)
+        let panel1 = MYIntroductionPanel(frame: cover.bounds, title: "Welcome!", description: "Knotty Lines a simple puzzle game for killing time. Go to the next page for how to play!", image: #imageLiteral(resourceName: "tutorial-appicon").scale(toFit: cover.frame.insetBy(dx: 30, dy: 30).size))!
     }
 }
 
