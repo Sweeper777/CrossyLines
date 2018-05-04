@@ -3,7 +3,7 @@ import CircleMenu
 import SCLAlertView_Objective_C
 import Kamishibai
 
-class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate {
+class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate, MYIntroductionDelegate {
 
     @IBOutlet var graphView: GraphView!
     @IBOutlet var circleMenu: CircleMenu!
@@ -224,6 +224,11 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate {
         introView.buildIntroduction(withPanels: [panel1, panel2, panel3, panel4, panel5, panel6, panel7])
         introView.delegate = self
         cover.contentView.addSubview(introView)
+    }
+    
+    func introduction(_ introductionView: MYBlurIntroductionView!, didFinishWith finishType: MYFinishType) {
+        cover.removeFromSuperview()
+        
     }
 }
 
