@@ -14,6 +14,7 @@ class UserSettings {
         nodeCount = defaults.has(key: "nodeCount") ? defaults.integer(forKey: "nodeCount") : 7
         maxConnectionCount = defaults.has(key: "maxConnectionCount") ? defaults.integer(forKey: "maxConnectionCount") : 4
         colorCodeConnections = defaults.has(key: "colorCodeConnections") ? defaults.bool(forKey: "colorCodeConnections") : true
+        nodeSize = defaults.has(key: "nodeSize") ? defaults.double(forKey: "nodeSize") : 30
     }
     
     static func saveUserSettings() {
