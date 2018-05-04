@@ -5,6 +5,9 @@ class UserSettings {
     static var maxConnectionCount = 4
     static var colorCodeConnections = true
     static var nodeSize: Double = 30
+    static var nodeSizeHalf: Double {
+        return nodeSize / 2.0
+    }
     
     static func loadUserSettings() {
         let defaults = UserDefaults.standard
