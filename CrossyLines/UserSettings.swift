@@ -22,5 +22,6 @@ class UserSettings {
         defaults.set(nodeCount, forKey: "nodeCount")
         defaults.set(maxConnectionCount, forKey: "maxConnectionCount")
         defaults.set(colorCodeConnections, forKey: "colorCodeConnections")
+        defaults.set(nodeSize, forKey: "nodeSize")
     }
 }
