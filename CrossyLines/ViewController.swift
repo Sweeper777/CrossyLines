@@ -2,6 +2,8 @@ import UIKit
 import CircleMenu
 import SCLAlertView_Objective_C
 import Kamishibai
+import MYBlurIntroductionView
+import NYXImagesKit
 
 class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate, MYIntroductionDelegate {
 
