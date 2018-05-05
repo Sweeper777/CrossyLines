@@ -235,6 +235,7 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate, M
     func introduction(_ introductionView: MYBlurIntroductionView!, didFinishWith finishType: MYFinishType) {
         cover.removeFromSuperview()
         
+        UserDefaults.standard.set(true, forKey: "tutorialCompleted")
     }
 }
 
