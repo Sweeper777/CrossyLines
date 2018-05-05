@@ -195,7 +195,6 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate, M
         if !UserDefaults.standard.bool(forKey: "tutorialCompleted") {
             showTutorial()
         }
-        navigationController?.pushViewController(<#T##viewController: UIViewController##UIViewController#>, animated: <#T##Bool#>)
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
