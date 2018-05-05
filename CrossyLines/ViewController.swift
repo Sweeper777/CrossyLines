@@ -97,6 +97,8 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate, M
             graphCopy.scale(toFit: insettedRect)
             self.graphView.animate(to: graphCopy, frameCount: 120)
             self.solved = true
+        case 3:
+            showTutorial()
         default:
             break
         }
