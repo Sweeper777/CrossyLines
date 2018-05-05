@@ -192,7 +192,9 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate, M
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         repositionViews()
+        if !UserDefaults.standard.bool(forKey: "tutorialCompleted") {
             showTutorial()
+        }
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
