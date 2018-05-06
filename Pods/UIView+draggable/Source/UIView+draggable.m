@@ -96,10 +96,10 @@
 - (void)handlePan:(UIPanGestureRecognizer*)sender {
     // Check to make you drag from dragging area
     CGPoint locationInView = [sender locationInView:self];
-    if (!CGRectContainsPoint(self.handle, locationInView)
-        && sender.state == UIGestureRecognizerStateBegan) {
-        return;
-    }
+//    if (!CGRectContainsPoint(self.handle, locationInView)
+//        && sender.state == UIGestureRecognizerStateBegan) {
+//        return;
+//    }
 
     [self adjustAnchorPointForGestureRecognizer:sender];
 
