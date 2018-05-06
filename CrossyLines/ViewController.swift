@@ -106,10 +106,12 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate, M
     }
     
     func graphViewDidStartDragging(nodeView: NodeView) {
+        print("didStart")
         circleMenu?.hideButtons(circleMenu.duration)
     }
     
     func graphViewDidEndDragging(nodeView: NodeView) {
+        print("didEnd")
         if !solved && !graph.checkIntersections().values.contains(true) {
             solved = true
             
