@@ -63,6 +63,10 @@ class GraphView: UIView {
         displayLink.add(to: .main, forMode: .defaultRunLoopMode)
     }
     
+    func unsyncDrawing() {
+        displayLink.remove(from: .main, forMode: .defaultRunLoopMode)
+    }
+    
     @objc func updateNodePositions() {
         if animations.isNotEmpty {
             animations.forEach { $0.nextFrame() }
