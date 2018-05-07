@@ -14,10 +14,6 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate, M
     var graph : Graph!
     var solutionGraph: Graph!
     var solved = false
-    
-    lazy var kamishibai: Kamishibai = {
-        return Kamishibai(initialViewController: self)
-    }()
     var cover: UIVisualEffectView!
     var introView: MYBlurIntroductionView!
     
