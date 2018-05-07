@@ -66,7 +66,10 @@ class GraphView: UIView {
     }
     
     func unsyncDrawing() {
-        displayLink.remove(from: .main, forMode: .defaultRunLoopMode)
+        if displayLink != nil {
+            displayLink.remove(from: .main, forMode: .defaultRunLoopMode)
+            displayLink = nil
+        }
     }
     
     @objc func updateNodePositions() {
