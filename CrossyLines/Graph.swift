@@ -79,21 +79,31 @@ class Graph {
     
     func checkIntersections() -> [Connection: Bool] {
         var dict = [Connection: Bool]()
-        var tempConnections = connections
-        while true {
-            if let connectionToCheck = tempConnections.subtracting(dict.keys).first {
-                let intersections = Set(tempConnections.filter { connectionToCheck.intersects(with: $0) })
-                if intersections.isEmpty {
-                    dict[connectionToCheck] = false
-                    tempConnections.remove(connectionToCheck)
-                } else {
-                    dict[connectionToCheck] = true
-                    for connection in intersections {
-                        dict[connection] = true
-                    }
+//        var tempConnections = connections
+//        while true {
+//            if let connectionToCheck = tempConnections.subtracting(dict.keys).first {
+//                let intersections = Set(tempConnections.filter { connectionToCheck.intersects(with: $0) })
+//                if intersections.isEmpty {
+//                    dict[connectionToCheck] = false
+//                    tempConnections.remove(connectionToCheck)
+//                } else {
+//                    dict[connectionToCheck] = true
+//                    for connection in intersections {
+//                        dict[connection] = true
+//                    }
+//                }
+//            } else {
+//                break
+//            }
+//        }
+        
+        let arrConnections = Array(connections)
+        for i in 0..<arrConnections.count {
+            for j in (i+1)..<arrConnections.count {
+                if arrConnections[i].intersects(with: arrConnections[j]) {
+                    dict[arrConnections[i]] = true
+                    dict[arrConnections[j]] = true
                 }
-            } else {
-                break
             }
         }
         return dict
