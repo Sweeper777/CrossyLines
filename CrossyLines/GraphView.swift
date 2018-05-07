@@ -81,6 +81,7 @@ class GraphView: UIView {
             if animations.contains(where: { $0.completed }) {
                 animations.removeAll()
                 subviews.forEach { $0.enableDragging() }
+                unsyncDrawing()
             }
         }
         
@@ -92,6 +93,7 @@ class GraphView: UIView {
     }
     
     func animate(to graph: Graph, frameCount: Int) {
+        syncDrawing()
         subviews.forEach { $0.setDraggable(false) }
         animations = zip(self.subviews, graph.nodes).map {
             NodeAnimation(from: $0.0.frame.origin, to: CGPoint(x: $0.1.x - 15, y: $0.1.y - 15), totalFrames: frameCount)
