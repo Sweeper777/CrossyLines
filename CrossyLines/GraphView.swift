@@ -59,8 +59,10 @@ class GraphView: UIView {
     }
     
     func syncDrawing() {
-        displayLink = CADisplayLink(target: self, selector: #selector(updateNodePositions))
-        displayLink.add(to: .main, forMode: .defaultRunLoopMode)
+        if displayLink == nil {
+            displayLink = CADisplayLink(target: self, selector: #selector(updateNodePositions))
+            displayLink.add(to: .main, forMode: .defaultRunLoopMode)
+        }
     }
     
     func unsyncDrawing() {
