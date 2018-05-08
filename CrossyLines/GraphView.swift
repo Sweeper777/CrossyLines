@@ -86,8 +86,8 @@ class GraphView: UIView {
         }
         
         for kvp in nodeViewsToNodes {
-            kvp.value.x = kvp.key.x + 15
-            kvp.value.y = kvp.key.y + 15
+            kvp.value.x = kvp.key.x + UserSettings.nodeSizeHalf.f
+            kvp.value.y = kvp.key.y + UserSettings.nodeSizeHalf.f
         }
         setNeedsDisplay()
     }
@@ -96,7 +96,7 @@ class GraphView: UIView {
         syncDrawing()
         subviews.forEach { $0.setDraggable(false) }
         animations = zip(self.subviews, graph.nodes).map {
-            NodeAnimation(from: $0.0.frame.origin, to: CGPoint(x: $0.1.x - 15, y: $0.1.y - 15), totalFrames: frameCount)
+            NodeAnimation(from: $0.0.frame.origin, to: CGPoint(x: $0.1.x - UserSettings.nodeSizeHalf.f, y: $0.1.y - UserSettings.nodeSizeHalf.f), totalFrames: frameCount)
         }
     }
 }
