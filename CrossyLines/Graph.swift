@@ -68,7 +68,7 @@ class Graph {
     }
     
     func shuffle(within rect: CGRect) {
-        let inset: CGFloat = 15.0
+        let inset: CGFloat = UserSettings.nodeSizeHalf.f
         let insetRect = rect.insetBy(dx: inset, dy: inset)
         let coordinates = coordinatesOnEllipse(halfWidth: Double(insetRect.width / 2), halfHeight: Double(insetRect.height / 2), count: self.nodes.count)
         zip(self.nodes, coordinates).forEach { pair in
