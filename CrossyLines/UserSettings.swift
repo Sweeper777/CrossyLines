@@ -4,9 +4,9 @@ class UserSettings {
     static var nodeCount: Int = 7
     static var maxConnectionCount = 4
     static var colorCodeConnections = true
-    static var nodeSize: Double = 30
-    static var nodeSizeHalf: Double {
-        return nodeSize / 2.0
+    static var nodeSize: Int = 30
+    static var nodeSizeHalf: Int {
+        return nodeSize / 2
     }
     
     static func loadUserSettings() {
