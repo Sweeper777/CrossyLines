@@ -35,8 +35,10 @@ class SettingsController: FormViewController {
             row.title = "Color Code Connections"
             row.value = UserSettings.colorCodeConnections
         }
-        .onChange({ (row) in
+        .onChange({ [weak self] (row) in
             UserSettings.colorCodeConnections = row.value ?? UserSettings.colorCodeConnections
+            self?.delegate?.didChangeImportantSetting()
+        })
         
         form +++ Section("Node size")
         
