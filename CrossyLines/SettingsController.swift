@@ -35,6 +35,23 @@ class SettingsController: FormViewController {
         }
         .onChange({ (row) in
             UserSettings.colorCodeConnections = row.value ?? UserSettings.colorCodeConnections
+        
+        form +++ Section("Node size")
+        
+        <<< SegmentedRow<Int>("nodeSize") {
+            row in
+            row.options = [30, 60, 90]
+            row.displayValueFor = { value in
+                guard let x = value else { return "" }
+                switch x {
+                case 30: return "Small"
+                case 60: return "Medium"
+                case 90: return "Large"
+                default: return ""
+                }
+            }
+            row.value = UserSettings.nodeSize
+        }
         })
     }
     
