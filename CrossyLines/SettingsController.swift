@@ -3,6 +3,8 @@ import Eureka
 
 class SettingsController: FormViewController {
     
+    weak var delegate: SettingsControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
