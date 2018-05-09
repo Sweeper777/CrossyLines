@@ -52,6 +52,9 @@ class SettingsController: FormViewController {
             }
             row.value = UserSettings.nodeSize
         }
+        .onChange({ [weak self] (row) in
+            UserSettings.nodeSize = row.value ?? UserSettings.nodeSize
+            self?.delegate?.didChangeImportantSetting()
         })
     }
     
