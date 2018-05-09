@@ -5,7 +5,7 @@ import Kamishibai
 import MYBlurIntroductionView
 import NYXImagesKit
 
-class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate, MYIntroductionDelegate {
+class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate, MYIntroductionDelegate, SettingsControllerDelegate {
 
     @IBOutlet var graphView: GraphView!
     @IBOutlet var circleMenu: CircleMenu!
@@ -221,6 +221,10 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate, M
         cover.removeFromSuperview()
         
         UserDefaults.standard.set(true, forKey: "tutorialCompleted")
+    }
+    
+    func didChangeImportantSetting() {
+        graphView.redrawAllNodes()
     }
 }
 
