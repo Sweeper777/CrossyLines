@@ -13,26 +13,30 @@ class GraphView: UIView {
     
     var graph: Graph! {
         didSet {
-            self.subviews.forEach { $0.removeFromSuperview() }
-            nodeViewsToNodes = [:]
-            
-            if graph != nil {
-                for node in graph.nodes {
-                    let nodeView = NodeView(frame: CGRect(x: node.x - 15, y: node.y - 15, width: 30, height: 30))
-                    nodeView.backgroundColor = .clear
-                    nodeView.enableDragging()
-                    nodeView.cagingArea = self.bounds
-                    nodeView.draggingStartedBlock = { [weak self] view in
-                        self?.delegate?.graphViewDidStartDragging(nodeView: view as! NodeView) }
-                    nodeView.draggingEndedBlock = { [weak self] view in
-                        self?.delegate?.graphViewDidEndDragging(nodeView: view as! NodeView) }
-                    self.addSubview(nodeView)
-                    nodeViewsToNodes[nodeView] = node
-                }
-            }
-            
-            self.setNeedsDisplay()
+            redrawAllNodes()
         }
+    }
+    
+    func redrawAllNodes() {
+        self.subviews.forEach { $0.removeFromSuperview() }
+        nodeViewsToNodes = [:]
+        
+        if graph != nil {
+            for node in graph.nodes {
+                let nodeView = NodeView(frame: CGRect(x: node.x - UserSettings.nodeSizeHalf.f, y: node.y - UserSettings.nodeSizeHalf.f, width: UserSettings.nodeSize.f, height: UserSettings.nodeSize.f))
+                nodeView.backgroundColor = .clear
+                nodeView.enableDragging()
+                nodeView.cagingArea = self.bounds
+                nodeView.draggingStartedBlock = { [weak self] view in
+                    self?.delegate?.graphViewDidStartDragging(nodeView: view as! NodeView) }
+                nodeView.draggingEndedBlock = { [weak self] view in
+                    self?.delegate?.graphViewDidEndDragging(nodeView: view as! NodeView) }
+                self.addSubview(nodeView)
+                nodeViewsToNodes[nodeView] = node
+            }
+        }
+        
+        self.setNeedsDisplay()
     }
     
     override func draw(_ rect: CGRect) {
