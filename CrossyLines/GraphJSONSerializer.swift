@@ -30,6 +30,15 @@ extension Graph {
             guard let nodeNumber = Int(String(key.dropFirst(4))) else { return nil }
             dict[nodeNumber] = node
         }
+        
+        for (_, jsonConnection) in jsonConnections {
+            guard let from = jsonConnection["from"].int else { return nil }
+            guard let to = jsonConnection["to"].int else { return nil }
+            guard let fromNode = dict[from] else { return nil }
+            guard let toNode = dict[to] else { return nil }
+            connections.insert(Connection(node1: fromNode, node2: toNode))
+        }
+        
         return Graph(nodes: nodes, connections: connections)
     }
 }
