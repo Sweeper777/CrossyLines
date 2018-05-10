@@ -8,5 +8,10 @@ extension Graph {
             nodesJSON["node\(i)"] = ["x": node.x, "y": node.y]
             backwardsDict[node] = i
         }
+        var connectionsJSON: [JSON] = []
+        for connection in self.connections {
+            connectionsJSON.append(["from": backwardsDict[connection.node1]!, "to": backwardsDict[connection.node2]!])
+        }
+        return ["nodes": nodesJSON, "connections": connectionsJSON]
     }
 }
