@@ -197,6 +197,12 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate, M
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = (segue.destination as? UINavigationController)?.topViewController as? SettingsController {
+            vc.delegate = self
+        }
+    }
+    
     func showTutorial() {
         if cover == nil {
             cover = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
