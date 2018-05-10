@@ -14,4 +14,14 @@ extension Graph {
         }
         return ["nodes": nodesJSON, "connections": connectionsJSON]
     }
+    
+    static func fromJSON(_ json: JSON) -> Graph? {
+        let jsonNodes = json["nodes"]
+        let jsonConnections = json["connections"]
+        var nodes = [Node]()
+        var connections = Set<Connection>()
+        
+        var dict: [Int: Node] = [:]
+        return Graph(nodes: nodes, connections: connections)
+    }
 }
