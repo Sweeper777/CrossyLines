@@ -16,7 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-        
+        guard let vc = window?.rootViewController as? ViewController else { return }
+        UserDefaults.standard.set(try? vc.graph.toJSON().rawData(), forKey: "lastPlayed")
+        UserDefaults.standard.set(try? vc.solutionGraph.toJSON().rawData(), forKey: "lastPlayedSolution")
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
