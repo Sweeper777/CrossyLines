@@ -62,7 +62,7 @@ class Graph {
         }
     }
     
-    private init(nodes: [Node], connections: Set<Connection>) {
+    init(nodes: [Node], connections: Set<Connection>) {
         self.nodes = nodes
         self.connections = connections
     }
