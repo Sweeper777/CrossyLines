@@ -128,6 +128,14 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate, M
         guard let solutionJSON = try? JSON(data: UserDefaults.standard.data(forKey: "lastPlayedSolution") ?? Data(bytes: [])) else { return false }
         guard let graph = Graph.fromJSON(json) else { return false }
         guard let solutionGraph = Graph.fromJSON(solutionJSON) else { return false }
+        DispatchQueue.main.async {
+            [weak self] in
+            self?.graph = graph
+            self?.solutionGraph = solutionGraph
+            self?.graphView.graph = graph
+            self?.solved = false
+        }
+        return true
     }
     
     func repositionViews() {
