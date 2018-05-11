@@ -123,6 +123,13 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate, M
         }
     }
     
+    func loadGraph() -> Bool {
+        guard let json = try? JSON(data: UserDefaults.standard.data(forKey: "lastPlayed") ?? Data(bytes: [])) else { return false }
+        guard let solutionJSON = try? JSON(data: UserDefaults.standard.data(forKey: "lastPlayedSolution") ?? Data(bytes: [])) else { return false }
+        guard let graph = Graph.fromJSON(json) else { return false }
+        guard let solutionGraph = Graph.fromJSON(solutionJSON) else { return false }
+    }
+    
     func repositionViews() {
         guard traitCollection.verticalSizeClass == .regular && traitCollection.horizontalSizeClass == .regular else { return }
         
