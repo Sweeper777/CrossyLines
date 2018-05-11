@@ -4,6 +4,7 @@ import SCLAlertView_Objective_C
 import Kamishibai
 import MYBlurIntroductionView
 import NYXImagesKit
+import SwiftyJSON
 
 class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate, MYIntroductionDelegate, SettingsControllerDelegate {
 
@@ -32,7 +33,9 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate, M
 //        addObserver(self, forKeyPath: "", options: [.new], context: nil)
 //        self.view.addSubview(nodeView)
         
-        newGraph()
+        if !loadGraph() {
+            newGraph()
+        }
         self.graphView.delegate = self
 //        self.graphView.syncDrawing()
         
