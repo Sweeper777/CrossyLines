@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		476C502A7038AAB3D83A6DD7 /* Pods_CrossyLines.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E96D9AF101DF7DE3F43DA518 /* Pods_CrossyLines.framework */; };
+		5A39D432209EEBA50055E7B2 /* SettingsControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A39D431209EEBA50055E7B2 /* SettingsControllerDelegate.swift */; };
+		5A39D434209EF4630055E7B2 /* GraphJSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A39D433209EF4630055E7B2 /* GraphJSONSerializer.swift */; };
 		5A3A5D77207F432E00208DAD /* NodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3A5D76207F432E00208DAD /* NodeView.swift */; };
 		5A3A5D79207FE72B00208DAD /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3A5D78207FE72B00208DAD /* GraphView.swift */; };
 		5A3AACAA208B1DE00073530B /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3AACA9208B1DE00073530B /* UserSettings.swift */; };
@@ -28,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		3785292724AE82A251F447ED /* Pods-CrossyLines.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossyLines.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrossyLines/Pods-CrossyLines.debug.xcconfig"; sourceTree = "<group>"; };
+		5A39D431209EEBA50055E7B2 /* SettingsControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsControllerDelegate.swift; sourceTree = "<group>"; };
+		5A39D433209EF4630055E7B2 /* GraphJSONSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphJSONSerializer.swift; sourceTree = "<group>"; };
 		5A3A5D76207F432E00208DAD /* NodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeView.swift; sourceTree = "<group>"; };
 		5A3A5D78207FE72B00208DAD /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		5A3AACA9208B1DE00073530B /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
@@ -100,12 +104,14 @@
 				5A3B277520888A89007F6895 /* Graph.swift */,
 				5A3B0B472089CF4500543D63 /* NodeAnimation.swift */,
 				5A3AACA9208B1DE00073530B /* UserSettings.swift */,
+				5A39D433209EF4630055E7B2 /* GraphJSONSerializer.swift */,
 				5A3A5D76207F432E00208DAD /* NodeView.swift */,
 				5A3A5D78207FE72B00208DAD /* GraphView.swift */,
 				5A3B4E41209473570031E904 /* GuideLabel.swift */,
 				5A3AACAF208B29FB0073530B /* AnimatedStepperCell.swift */,
 				5A3AACAD208B28F10073530B /* AnimatedStepperCell.xib */,
 				5A3B0B492089EA5800543D63 /* GraphViewDelegate.swift */,
+				5A39D431209EEBA50055E7B2 /* SettingsControllerDelegate.swift */,
 				5A3DB0D5207C9CDB000C8FF8 /* Assets.xcassets */,
 				5A3DB0D7207C9CDB000C8FF8 /* LaunchScreen.storyboard */,
 				5A3DB0DA207C9CDB000C8FF8 /* Info.plist */,
@@ -241,6 +247,7 @@
 				"${BUILT_PRODUCTS_DIR}/SCLAlertView-Objective-C/SCLAlertView_Objective_C.framework",
 				"${BUILT_PRODUCTS_DIR}/Stepperier/Stepperier.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftRandom/SwiftRandom.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUtils/SwiftyUtils.framework",
 				"${BUILT_PRODUCTS_DIR}/UIView+draggable/UIView_draggable.framework",
 			);
@@ -254,6 +261,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView_Objective_C.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stepperier.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftRandom.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUtils.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIView_draggable.framework",
 			);
@@ -269,11 +277,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A39D434209EF4630055E7B2 /* GraphJSONSerializer.swift in Sources */,
 				5A3B277620888A89007F6895 /* Graph.swift in Sources */,
 				5A3A5D79207FE72B00208DAD /* GraphView.swift in Sources */,
 				5A3B0B4A2089EA5800543D63 /* GraphViewDelegate.swift in Sources */,
 				5A3C2AC1207DF08B00B9ED72 /* Node.swift in Sources */,
 				5A3AACAA208B1DE00073530B /* UserSettings.swift in Sources */,
+				5A39D432209EEBA50055E7B2 /* SettingsControllerDelegate.swift in Sources */,
 				5A3B4E42209473570031E904 /* GuideLabel.swift in Sources */,
 				5A3DB0D1207C9CDB000C8FF8 /* ViewController.swift in Sources */,
 				5A3AACAC208B27160073530B /* SettingsController.swift in Sources */,
