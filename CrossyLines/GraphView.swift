@@ -42,14 +42,13 @@ class GraphView: UIView {
     override func draw(_ rect: CGRect) {
         if graph == nil { return }
         
-        let intersectionDict = graph.checkIntersections()
-        
         for connection in graph.connections {
             let path = UIBezierPath()
             path.lineWidth = 2
             path.move(to: CGPoint(x: connection.node1.x, y: connection.node1.y))
             path.addLine(to: CGPoint(x: connection.node2.x, y: connection.node2.y))
             if UserSettings.colorCodeConnections {
+                let intersectionDict = graph.checkIntersections()
                 if intersectionDict[connection] ?? false {
                     UIColor.red.setStroke()
                 } else {
