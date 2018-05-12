@@ -58,21 +58,31 @@ struct Connection: Hashable, CustomStringConvertible {
         let p2 = self.node2
         let p3 = connection.node1
         let p4 = connection.node2
-        let d = (p2.x - p1.x)*(p4.y - p3.y) - (p2.y - p1.y)*(p4.x - p3.x)
-        if d == 0 {
-            return false
-        }
+//        let d = (p2.x - p1.x)*(p4.y - p3.y) - (p2.y - p1.y)*(p4.x - p3.x)
+//        if d == 0 {
+//            return false
+//        }
+//
+//        if p2.samePointAs(p3) || p4.samePointAs(p1) || p2.samePointAs(p4) || p1.samePointAs(p3){
+//            return false
+//        }
+//
+//        let u = ((p3.x - p1.x)*(p4.y - p3.y) - (p3.y - p1.y)*(p4.x - p3.x))/d
+//        let v = ((p3.x - p1.x)*(p2.y - p1.y) - (p3.y - p1.y)*(p2.x - p1.x))/d
+//        if !(0.0...1.0).contains(u) || !(0.0...1.0).contains(v) {
+//            return false
+//        }
+//        return true
         
-        if p2.samePointAs(p3) || p4.samePointAs(p1) || p2.samePointAs(p4) || p1.samePointAs(p3){
-            return false
+        var denominator = (p4.y - p3.y) * (p2.x - p1.x) - (p4.x - p3.x) * (p2.y - p1.y)
+        var ua = (p4.x - p3.x) * (p1.y - p3.y) - (p4.y - p3.y) * (p1.x - p3.x)
+        var ub = (p2.x - p1.x) * (p1.y - p3.y) - (p2.y - p1.y) * (p1.x - p3.x)
+        if denominator < 0 {
+            ua = -ua
+            ub = -ub
+            denominator = -denominator
         }
-        
-        let u = ((p3.x - p1.x)*(p4.y - p3.y) - (p3.y - p1.y)*(p4.x - p3.x))/d
-        let v = ((p3.x - p1.x)*(p2.y - p1.y) - (p3.y - p1.y)*(p2.x - p1.x))/d
-        if !(0.0...1.0).contains(u) || !(0.0...1.0).contains(v) {
-            return false
-        }
-        return true
+        return (ua > 0.0 && ua <= denominator && ub > 0.0 && ub <= denominator)
     }
     
     static func ==(lhs: Connection, rhs: Connection) -> Bool {
