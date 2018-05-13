@@ -14,3 +14,14 @@
 "From bottom left to top right:\nRestart the puzzle\nSettings\nShow a solution\nShow this tutorial" = "From bottom left to top right:\nRestart the puzzle\nSettings\nShow a solution\nShow this tutorial";
 "Have Fun!" = "Have Fun!";
 "That's it! Have fun playing with the naughty lines!" = "That's it! Have fun playing with the naughty lines!";
+
+"Drag the number handle to the left or right to change it!" = "Drag the number handle to the left or right to change it!";
+"Number of nodes" = "Number of nodes";
+"Max Connections" = "Max Connections";
+"Color Code Connections" = "Color Code Connections";
+"Node size" = "Node size";
+"Small" = "Small";
+"Medium" = "Medium";
+"Large" = "Large";
+
+"Skip" = "Skip";
