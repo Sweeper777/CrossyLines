@@ -2,3 +2,15 @@
 "You completed the puzzle! Tap \"NEW\" to do another one!" = "You completed the puzzle! Tap \"NEW\" to do another one!";
 "OK" = "OK";
 
+"Welcome!" = "Welcome!";
+"Knotty Lines is a simple puzzle game for killing time. Swipe left to go to the next page for how to play!" = "Knotty Lines is a simple puzzle game for killing time. Swipe left to go to the next page for how to play!";
+"How to Play" = "How to Play";
+"The puzzle starts off like this, with these little yellow dots called \"nodes\" that are connected by lines. The lines intersect each other." = "The puzzle starts off like this, with these little yellow dots called \"nodes\" that are connected by lines. The lines intersect each other.";
+"You need to move the nodes so that no line intersect any other lines, just like this:" = "You need to move the nodes so that no line intersect any other lines, just like this:";
+"New Puzzle" = "New Puzzle";
+"You can tap on this button to randomly generate a new puzzle!" = "You can tap on this button to randomly generate a new puzzle!";
+"Menu" = "Menu";
+"This is the menu button. Tap on it and more buttons will show up. They will be explained in the next page!" = "This is the menu button. Tap on it and more buttons will show up. They will be explained in the next page!";
+"From bottom left to top right:\nRestart the puzzle\nSettings\nShow a solution\nShow this tutorial" = "From bottom left to top right:\nRestart the puzzle\nSettings\nShow a solution\nShow this tutorial";
+"Have Fun!" = "Have Fun!";
+"That's it! Have fun playing with the naughty lines!" = "That's it! Have fun playing with the naughty lines!";
