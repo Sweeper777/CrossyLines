@@ -108,7 +108,7 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate, M
         if !solved && !graph.checkIntersections().values.contains(true) {
             solved = true
             
-            SCLAlertView().showSuccess(self, title: "Congratulations!", subTitle: "You completed the puzzle! Tap \"NEW\" to do another one!", closeButtonTitle: "OK", duration: 0)
+            SCLAlertView().showSuccess(self, title: "Congratulations!".localized, subTitle: "You completed the puzzle! Tap \"NEW\" to do another one!".localized, closeButtonTitle: "OK".localized, duration: 0)
         }
     }
     
