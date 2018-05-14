@@ -2,3 +2,15 @@
 "You completed the puzzle! Tap \"NEW\" to do another one!" = "你成功了！點擊「NEW」按鈕來生成新遊戲";
 "OK" = "確定";
 
+"Welcome!" = "歡迎！";
+"Knotty Lines is a simple puzzle game for killing time. Swipe left to go to the next page for how to play!" = "Knotty Lines 是一款簡單又消磨時間的休閒小遊戲，向左滑動來顯示下一頁！";
+"How to Play" = "玩法";
+"The puzzle starts off like this, with these little yellow dots called \"nodes\" that are connected by lines. The lines intersect each other." = "遊戲會像下圖這樣開始：屏幕上會顯示一些黃色的節點，它們被一些線段連起來。";
+"You need to move the nodes so that no line intersect any other lines, just like this:" = "你需要移動屏幕上的節點，使所有線段都不與其他線段交叉，像這樣：";
+"New Puzzle" = "新遊戲";
+"You can tap on this button to randomly generate a new puzzle!" = "這個「NEW」按鈕可以隨機生成一個新遊戲";
+"Menu" = "菜單";
+"This is the menu button. Tap on it and more buttons will show up. They will be explained in the next page!" = "點擊這個按鈕會出現菜單，菜單的各項會在下一頁介紹。";
+"From bottom left to top right:\nRestart the puzzle\nSettings\nShow a solution\nShow this tutorial" = "左下至右上：重新開始、設定、顯示答案、顯示這個教程";
+"Have Fun!" = "開心地玩吧！";
+"That's it! Have fun playing with the naughty lines!" = "就這麼簡單！跟淘氣的線段們玩吧！";
