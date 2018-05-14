@@ -8,10 +8,10 @@ class SettingsController: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        form +++ Section(footer: "Drag the number handle to the left or right to change it!")
+        form +++ Section(footer: "Drag the number handle to the left or right to change it!".localized)
         <<< AnimatedStepperRow("nodeCount") {
             row in
-            row.cell.label.text = "Number of nodes"
+            row.cell.label.text = "Number of nodes".localized
             row.cell.stepper.minimumValue = 7
             row.cell.stepper.maximumValue = 40
             row.value = UserSettings.nodeCount
@@ -21,7 +21,7 @@ class SettingsController: FormViewController {
         })
         <<< AnimatedStepperRow("maxConnections") {
             row in
-            row.cell.label.text = "Max Connections"
+            row.cell.label.text = "Max Connections".localized
             row.cell.stepper.minimumValue = 4
             row.cell.stepper.maximumValue = 8
             row.value = UserSettings.maxConnectionCount
@@ -32,7 +32,7 @@ class SettingsController: FormViewController {
         
         form +++ SwitchRow("colorCodeConnections") {
             row in
-            row.title = "Color Code Connections"
+            row.title = "Color Code Connections".localized
             row.value = UserSettings.colorCodeConnections
         }
         .onChange({ [weak self] (row) in
@@ -40,7 +40,7 @@ class SettingsController: FormViewController {
             self?.delegate?.didChangeImportantSetting()
         })
         
-        form +++ Section("Node size")
+        form +++ Section("Node size".localized)
         
         <<< SegmentedRow<Int>("nodeSize") {
             row in
@@ -48,9 +48,9 @@ class SettingsController: FormViewController {
             row.displayValueFor = { value in
                 guard let x = value else { return "" }
                 switch x {
-                case 30: return "Small"
-                case 60: return "Medium"
-                case 90: return "Large"
+                case 30: return "Small".localized
+                case 60: return "Medium".localized
+                case 90: return "Large".localized
                 default: return ""
                 }
             }
