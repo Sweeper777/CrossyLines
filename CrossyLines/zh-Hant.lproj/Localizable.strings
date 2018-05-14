@@ -14,3 +14,13 @@
 "From bottom left to top right:\nRestart the puzzle\nSettings\nShow a solution\nShow this tutorial" = "左下至右上：重新開始、設定、顯示答案、顯示這個教程";
 "Have Fun!" = "開心地玩吧！";
 "That's it! Have fun playing with the naughty lines!" = "就這麼簡單！跟淘氣的線段們玩吧！";
+
+"Drag the number handle to the left or right to change it!" = "把數字向左右拖動來改變其數值！";
+"Number of nodes" = "節點數";
+"Max Connections" = "最大連接數";
+"Color Code Connections" = "動態鏈接線";
+"Node size" = "節點大小";
+"Small" = "小";
+"Medium" = "中";
+"Large" = "大";
+
