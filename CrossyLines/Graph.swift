@@ -20,15 +20,17 @@ class Graph {
     }
     
     init(nodeCount: Int, maxDegree: Int) {
-        nodes = []
-        var usedPoints = Set<Point>()
-        for _ in 0..<nodeCount {
-            while true {
-                let point = Point(x: Int.random(0, nodeCount / 2), y: Int.random(0, nodeCount / 2))
-                if usedPoints.insert(point).inserted {
-                    break
+        func randomPoints(_ nodeCount: Int) -> Set<Point> {
+            var points = Set<Point>()
+            for _ in 0..<nodeCount {
+                while true {
+                    let point = Point(x: Int.random(0, nodeCount / 2), y: Int.random(0, nodeCount / 2))
+                    if points.insert(point).inserted {
+                        break
+                    }
                 }
             }
+            return points
         }
         
         for point in usedPoints {
