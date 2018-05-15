@@ -237,6 +237,7 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate, M
         
         introView = MYBlurIntroductionView(frame: cover.bounds)
         introView.buildIntroduction(withPanels: [panel1, panel2, panel3, panel4, panel5, panel6, panel7])
+        introView.rightSkipButton.setTitle("Skip".localized, for: .normal)
         introView.delegate = self
         cover.contentView.addSubview(introView)
     }
