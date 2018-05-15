@@ -54,6 +54,10 @@ struct Connection: Hashable, CustomStringConvertible {
     }
     
     func intersects(with connection: Connection) -> Bool {
+        func linesAreConnected(_ p2: Node, _ p3: Node, _ p4: Node, _ p1: Node) -> Bool {
+            return p2.samePointAs(p3) || p4.samePointAs(p1) || p2.samePointAs(p4) || p1.samePointAs(p3)
+        }
+        
         let p1 = self.node1
         let p2 = self.node2
         let p3 = connection.node1
@@ -63,9 +67,9 @@ struct Connection: Hashable, CustomStringConvertible {
 //            return false
 //        }
 //
-//        if p2.samePointAs(p3) || p4.samePointAs(p1) || p2.samePointAs(p4) || p1.samePointAs(p3){
-//            return false
-//        }
+        if linesAreConnected(p2, p3, p4, p1){
+            return false
+        }
 //
 //        let u = ((p3.x - p1.x)*(p4.y - p3.y) - (p3.y - p1.y)*(p4.x - p3.x))/d
 //        let v = ((p3.x - p1.x)*(p2.y - p1.y) - (p3.y - p1.y)*(p2.x - p1.x))/d
