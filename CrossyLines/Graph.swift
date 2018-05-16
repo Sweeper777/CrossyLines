@@ -80,6 +80,12 @@ class Graph {
             }
             return connections
         }
+        
+        let usedPoints = randomPoints(nodeCount)
+        nodes = getNodes(from: usedPoints)
+        
+        connections = []
+        connections = generateConnections()
     }
     
     init(nodes: [Node], connections: Set<Connection>) {
