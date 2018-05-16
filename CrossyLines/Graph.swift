@@ -53,9 +53,32 @@ class Graph {
             return (degrees[nodeToAddEdge] ?? 0) < maxDegree && (degrees[neighbour] ?? 0) < maxDegree
         }
         
+        func generateConnections() -> Set<Connection> {
+            var connections: Set<Connection> = []
+            var degrees = [Node: Int]()
+            var edgeAdded = false
+            addEdge: while true {
+                edgeAdded = false
+                for nodeToAddEdge in nodeArrayInOrderOfDegree(degreesDict: degrees) {
+                    let nearestNeighbours = nodeArrayInOrderOfDistance(to: nodeToAddEdge)
+                    for neighbour in nearestNeighbours {
+                        let candidateEdge = Connection(node1: nodeToAddEdge, node2: neighbour)
+                        if notDuplicate(candidateEdge) &&
+                            notIntersecting(candidateEdge) &&
+                            notExceedingMaxDegree(degrees, nodeToAddEdge, neighbour) {
+                            connections.insert(candidateEdge)
+                            degrees[nodeToAddEdge] = (degrees[nodeToAddEdge] ?? 0) + 1
+                            degrees[neighbour] = (degrees[neighbour] ?? 0) + 1
+                            edgeAdded = true
+                            continue addEdge
+                        }
                     }
                 }
+                if !edgeAdded {
+                    break
+                }
             }
+            return connections
         }
     }
     
