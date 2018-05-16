@@ -41,6 +41,10 @@ class Graph {
             return nodes
         }
         
+        func notDuplicate(_ candidateEdge: Connection) -> Bool {
+            return !connections.contains(candidateEdge)
+        }
+        
                     }
                 }
             }
