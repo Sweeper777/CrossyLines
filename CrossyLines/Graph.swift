@@ -33,8 +33,12 @@ class Graph {
             return points
         }
         
-        for point in usedPoints {
-            nodes.append(Node(x: CGFloat(point.x * 40), y: CGFloat(point.y * 40)))
+        func getNodes(from points: Set<Point>) -> [Node] {
+            var nodes: [Node] = []
+            for point in points {
+                nodes.append(Node(x: CGFloat(point.x * 40), y: CGFloat(point.y * 40)))
+            }
+            return nodes
         }
         
         var degrees = [Node: Int]()
