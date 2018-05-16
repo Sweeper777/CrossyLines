@@ -48,6 +48,11 @@ class Graph {
         func notIntersecting(_ candidateEdge: Connection) -> Bool {
             return !connections.contains { $0.intersects(with: candidateEdge) }
         }
+        
+        func notExceedingMaxDegree(_ degrees: [Node: Int], _ nodeToAddEdge: Node, _ neighbour: Node) -> Bool {
+            return (degrees[nodeToAddEdge] ?? 0) < maxDegree && (degrees[neighbour] ?? 0) < maxDegree
+        }
+        
                     }
                 }
             }
