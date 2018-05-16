@@ -45,6 +45,9 @@ class Graph {
             return !connections.contains(candidateEdge)
         }
         
+        func notIntersecting(_ candidateEdge: Connection) -> Bool {
+            return !connections.contains { $0.intersects(with: candidateEdge) }
+        }
                     }
                 }
             }
