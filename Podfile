@@ -17,4 +17,5 @@ target 'CrossyLines' do
   pod 'MYBlurIntroductionView'
   pod 'NYXImagesKit'
   pod 'SwiftyJSON'
+  pod 'Google-Mobile-Ads-SDK'
 end

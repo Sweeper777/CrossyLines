@@ -53,6 +53,10 @@ SOFTWARE.
 
 
 
+## Google-Mobile-Ads-SDK
+
+Copyright 2018 Google
+
 ## Kamishibai
 
 MIT License
