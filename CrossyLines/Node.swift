@@ -62,31 +62,31 @@ struct Connection: Hashable, CustomStringConvertible {
         let p2 = self.node2
         let p3 = connection.node1
         let p4 = connection.node2
-//        let d = (p2.x - p1.x)*(p4.y - p3.y) - (p2.y - p1.y)*(p4.x - p3.x)
-//        if d == 0 {
-//            return false
-//        }
-//
+        let d = (p2.x - p1.x)*(p4.y - p3.y) - (p2.y - p1.y)*(p4.x - p3.x)
+        if d == 0 {
+            return false
+        }
+
         if linesAreConnected(p2, p3, p4, p1){
             return false
         }
-//
-//        let u = ((p3.x - p1.x)*(p4.y - p3.y) - (p3.y - p1.y)*(p4.x - p3.x))/d
-//        let v = ((p3.x - p1.x)*(p2.y - p1.y) - (p3.y - p1.y)*(p2.x - p1.x))/d
-//        if !(0.0...1.0).contains(u) || !(0.0...1.0).contains(v) {
-//            return false
-//        }
-//        return true
-        
-        var denominator = (p4.y - p3.y) * (p2.x - p1.x) - (p4.x - p3.x) * (p2.y - p1.y)
-        var ua = (p4.x - p3.x) * (p1.y - p3.y) - (p4.y - p3.y) * (p1.x - p3.x)
-        var ub = (p2.x - p1.x) * (p1.y - p3.y) - (p2.y - p1.y) * (p1.x - p3.x)
-        if denominator < 0 {
-            ua = -ua
-            ub = -ub
-            denominator = -denominator
+
+        let u = ((p3.x - p1.x)*(p4.y - p3.y) - (p3.y - p1.y)*(p4.x - p3.x))/d
+        let v = ((p3.x - p1.x)*(p2.y - p1.y) - (p3.y - p1.y)*(p2.x - p1.x))/d
+        if !(0.0...1.0).contains(u) || !(0.0...1.0).contains(v) {
+            return false
         }
-        return (ua > 0.0 && ua <= denominator && ub > 0.0 && ub <= denominator)
+        return true
+        
+//        var denominator = (p4.y - p3.y) * (p2.x - p1.x) - (p4.x - p3.x) * (p2.y - p1.y)
+//        var ua = (p4.x - p3.x) * (p1.y - p3.y) - (p4.y - p3.y) * (p1.x - p3.x)
+//        var ub = (p2.x - p1.x) * (p1.y - p3.y) - (p2.y - p1.y) * (p1.x - p3.x)
+//        if denominator < 0 {
+//            ua = -ua
+//            ub = -ub
+//            denominator = -denominator
+//        }
+//        return (ua > 0.0 && ua <= denominator && ub > 0.0 && ub <= denominator)
     }
     
     static func ==(lhs: Connection, rhs: Connection) -> Bool {
