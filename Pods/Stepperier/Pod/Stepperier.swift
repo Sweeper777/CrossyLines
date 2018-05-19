@@ -16,7 +16,7 @@ fileprivate struct Constants {
 }
 
 public protocol StepperierAnimationHandler {
-    func animate(animations: @escaping ((Void) -> Void), completion: @escaping ((Void) -> Void))
+    func animate(animations: @escaping (() -> Void), completion: @escaping (() -> Void))
 }
 
 internal struct PanGestureInteraction {
@@ -234,7 +234,7 @@ open class Stepperier: UIControl {
             animationHandler.animate(animations: { [weak self] in
                 guard let strongSelf = self else { return }
                 strongSelf.layoutIfNeeded()
-                }, completion: { [weak self] _ in
+                }, completion: { [weak self] in
                     guard let strongSelf = self else { return }
                     strongSelf.panGestureInteractionInformation = nil
             })
