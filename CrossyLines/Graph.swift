@@ -20,72 +20,46 @@ class Graph {
     }
     
     init(nodeCount: Int, maxDegree: Int) {
-        func randomPoints(_ nodeCount: Int) -> Set<Point> {
-            var points = Set<Point>()
-            for _ in 0..<nodeCount {
-                while true {
-                    let point = Point(x: Int.random(0, nodeCount / 2), y: Int.random(0, nodeCount / 2))
-                    if points.insert(point).inserted {
-                        break
-                    }
-                }
-            }
-            return points
-        }
-        
-        func getNodes(from points: Set<Point>) -> [Node] {
-            var nodes: [Node] = []
-            for point in points {
-                nodes.append(Node(x: CGFloat(point.x * 40), y: CGFloat(point.y * 40)))
-            }
-            return nodes
-        }
-        
-        func notDuplicate(_ candidateEdge: Connection) -> Bool {
-            return !connections.contains(candidateEdge)
-        }
-        
-        func notIntersecting(_ candidateEdge: Connection) -> Bool {
-            return !connections.contains { $0.intersects(with: candidateEdge) }
-        }
-        
-        func notExceedingMaxDegree(_ degrees: [Node: Int], _ nodeToAddEdge: Node, _ neighbour: Node) -> Bool {
-            return (degrees[nodeToAddEdge] ?? 0) < maxDegree && (degrees[neighbour] ?? 0) < maxDegree
-        }
-        
-        func generateConnections() -> Set<Connection> {
-            var connections: Set<Connection> = []
-            var degrees = [Node: Int]()
-            var edgeAdded = false
-            addEdge: while true {
-                edgeAdded = false
-                for nodeToAddEdge in nodeArrayInOrderOfDegree(degreesDict: degrees) {
-                    let nearestNeighbours = nodeArrayInOrderOfDistance(to: nodeToAddEdge)
-                    for neighbour in nearestNeighbours {
-                        let candidateEdge = Connection(node1: nodeToAddEdge, node2: neighbour)
-                        if notDuplicate(candidateEdge) &&
-                            notIntersecting(candidateEdge) &&
-                            notExceedingMaxDegree(degrees, nodeToAddEdge, neighbour) {
-                            connections.insert(candidateEdge)
-                            degrees[nodeToAddEdge] = (degrees[nodeToAddEdge] ?? 0) + 1
-                            degrees[neighbour] = (degrees[neighbour] ?? 0) + 1
-                            edgeAdded = true
-                            continue addEdge
-                        }
-                    }
-                }
-                if !edgeAdded {
+        nodes = []
+        var usedPoints = Set<Point>()
+        for _ in 0..<nodeCount {
+            while true {
+                let point = Point(x: Int.random(0, nodeCount / 2), y: Int.random(0, nodeCount / 2))
+                if usedPoints.insert(point).inserted {
                     break
                 }
             }
-            return connections
         }
         
-        let usedPoints = randomPoints(nodeCount)
-        nodes = getNodes(from: usedPoints)
+        for point in usedPoints {
+            nodes.append(Node(x: CGFloat(point.x * 40), y: CGFloat(point.y * 40)))
+        }
         
+        var degrees = [Node: Int]()
         connections = []
-        connections = generateConnections()
+        var edgeAdded = false
+        addEdge: while true {
+            edgeAdded = false
+            for nodeToAddEdge in nodeArrayInOrderOfDegree(degreesDict: degrees) {
+                let nearestNeighbours = nodeArrayInOrderOfDistance(to: nodeToAddEdge)
+                for neighbour in nearestNeighbours {
+                    let candidateEdge = Connection(node1: nodeToAddEdge, node2: neighbour)
+                    let notDuplicate = !connections.contains(candidateEdge)
+                    let notIntersecting = !connections.contains { $0.intersects(with: candidateEdge) }
+                    let notExceedingMaxDegree = (degrees[nodeToAddEdge] ?? 0) < maxDegree && (degrees[neighbour] ?? 0) < maxDegree
+                    if notDuplicate && notIntersecting && notExceedingMaxDegree {
+                        connections.insert(candidateEdge)
+                        degrees[nodeToAddEdge] = (degrees[nodeToAddEdge] ?? 0) + 1
+                        degrees[neighbour] = (degrees[neighbour] ?? 0) + 1
+                        edgeAdded = true
+                        continue addEdge
+                    }
+                }
+            }
+            if !edgeAdded {
+                break
+            }
+        }
     }
     
     init(nodes: [Node], connections: Set<Connection>) {
