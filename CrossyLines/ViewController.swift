@@ -258,6 +258,8 @@ extension ViewController: MYIntroductionDelegate {
         UserDefaults.standard.set(true, forKey: "tutorialCompleted")
     }
 }
+
+extension ViewController: SettingsControllerDelegate {
     func didChangeImportantSetting() {
         graphView.redrawAllNodes()
     }
