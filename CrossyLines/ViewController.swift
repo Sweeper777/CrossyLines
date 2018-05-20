@@ -66,20 +66,6 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate, M
         
         }
         
-    func graphViewDidStartDragging(nodeView: NodeView) {
-        graphView.syncDrawing()
-        circleMenu?.hideButtons(circleMenu.duration)
-    }
-    
-    func graphViewDidEndDragging(nodeView: NodeView) {
-        graphView.unsyncDrawing()
-        if !solved && !graph.checkIntersections().values.contains(true) {
-            solved = true
-            
-            SCLAlertView().showSuccess(self, title: "Congratulations!".localized, subTitle: "You completed the puzzle! Tap \"NEW\" to do another one!".localized, closeButtonTitle: "OK".localized, duration: 0)
-        }
-    }
-    
     @IBAction func newGraph() {
         circleMenu?.hideButtons(circleMenu.duration)
         DispatchQueue.main.async {
@@ -246,6 +232,23 @@ extension ViewController: CircleMenuDelegate {
         button.setImage(highlightedImage, for: .highlighted)
         button.tintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
     }
+}
+
+extension ViewController: GraphViewDelegate {
+    func graphViewDidStartDragging(nodeView: NodeView) {
+        graphView.syncDrawing()
+        circleMenu?.hideButtons(circleMenu.duration)
+    }
+    
+    func graphViewDidEndDragging(nodeView: NodeView) {
+        graphView.unsyncDrawing()
+        if !solved && !graph.checkIntersections().values.contains(true) {
+            solved = true
+            
+            SCLAlertView().showSuccess(self, title: "Congratulations!".localized, subTitle: "You completed the puzzle! Tap \"NEW\" to do another one!".localized, closeButtonTitle: "OK".localized, duration: 0)
+        }
+    }
+    
 }
     func introduction(_ introductionView: MYBlurIntroductionView!, didFinishWith finishType: MYFinishType) {
         cover.removeFromSuperview()
