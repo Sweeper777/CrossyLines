@@ -6,7 +6,7 @@ import MYBlurIntroductionView
 import NYXImagesKit
 import SwiftyJSON
 
-class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate, MYIntroductionDelegate, SettingsControllerDelegate {
+class ViewController: UIViewController {
 
     @IBOutlet var graphView: GraphView!
     @IBOutlet var circleMenu: CircleMenu!
