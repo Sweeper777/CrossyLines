@@ -250,12 +250,14 @@ extension ViewController: GraphViewDelegate {
     }
     
 }
+
+extension ViewController: MYIntroductionDelegate {
     func introduction(_ introductionView: MYBlurIntroductionView!, didFinishWith finishType: MYFinishType) {
         cover.removeFromSuperview()
         
         UserDefaults.standard.set(true, forKey: "tutorialCompleted")
     }
-    
+}
     func didChangeImportantSetting() {
         graphView.redrawAllNodes()
     }
