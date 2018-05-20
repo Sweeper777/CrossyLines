@@ -63,41 +63,9 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate, M
         }
     }
     
-    func circleMenu(_ circleMenu: CircleMenu, willDisplay button: UIButton, atIndex: Int) {
-        let largeImage = traitCollection.horizontalSizeClass == .regular && traitCollection.verticalSizeClass == .regular ? "-large" : ""
         
-        button.backgroundColor = items[atIndex].color
-        
-        button.setImage(UIImage(named: items[atIndex].icon + largeImage), for: .normal)
-        
-        // set highlited image
-        let highlightedImage = UIImage(named: items[atIndex].icon + largeImage)?.withRenderingMode(.alwaysTemplate)
-        button.setImage(highlightedImage, for: .highlighted)
-        button.tintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
-    }
-    
-    func circleMenu(_ circleMenu: CircleMenu, buttonDidSelected button: UIButton, atIndex: Int) {
-        switch atIndex {
-        case 0:
-            let originalGraph = graph.createCopy()
-            originalGraph.shuffle(within: graphView.bounds)
-            graphView.animate(to: originalGraph, frameCount: 30)
-        case 1:
-            performSegue(withIdentifier: "showSettings", sender: nil)
-        case 2:
-            let insettedRect = self.graphView.bounds.insetBy(dx: UserSettings.nodeSizeHalf.f, dy: UserSettings.nodeSizeHalf.f)
-            let graphCopy = solutionGraph.createCopy()
-            graphCopy.scale(toFit: insettedRect)
-            self.graphView.animate(to: graphCopy, frameCount: 120)
-            self.solved = true
-        case 3:
-            showTutorial()
-        default:
-            break
         }
         
-    }
-    
     func graphViewDidStartDragging(nodeView: NodeView) {
         graphView.syncDrawing()
         circleMenu?.hideButtons(circleMenu.duration)
@@ -241,7 +209,44 @@ class ViewController: UIViewController, CircleMenuDelegate, GraphViewDelegate, M
         introView.delegate = self
         cover.contentView.addSubview(introView)
     }
+}
+
+extension ViewController: CircleMenuDelegate {
+    func circleMenu(_ circleMenu: CircleMenu, buttonDidSelected button: UIButton, atIndex: Int) {
+        switch atIndex {
+        case 0:
+            let originalGraph = graph.createCopy()
+            originalGraph.shuffle(within: graphView.bounds)
+            graphView.animate(to: originalGraph, frameCount: 30)
+        case 1:
+            performSegue(withIdentifier: "showSettings", sender: nil)
+        case 2:
+            let insettedRect = self.graphView.bounds.insetBy(dx: UserSettings.nodeSizeHalf.f, dy: UserSettings.nodeSizeHalf.f)
+            let graphCopy = solutionGraph.createCopy()
+            graphCopy.scale(toFit: insettedRect)
+            self.graphView.animate(to: graphCopy, frameCount: 120)
+            self.solved = true
+        case 3:
+            showTutorial()
+        default:
+            break
+        }
+        
+    }
     
+    func circleMenu(_ circleMenu: CircleMenu, willDisplay button: UIButton, atIndex: Int) {
+        let largeImage = traitCollection.horizontalSizeClass == .regular && traitCollection.verticalSizeClass == .regular ? "-large" : ""
+        
+        button.backgroundColor = items[atIndex].color
+        
+        button.setImage(UIImage(named: items[atIndex].icon + largeImage), for: .normal)
+        
+        // set highlited image
+        let highlightedImage = UIImage(named: items[atIndex].icon + largeImage)?.withRenderingMode(.alwaysTemplate)
+        button.setImage(highlightedImage, for: .highlighted)
+        button.tintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
+    }
+}
     func introduction(_ introductionView: MYBlurIntroductionView!, didFinishWith finishType: MYFinishType) {
         cover.removeFromSuperview()
         
