@@ -55,6 +55,8 @@ class ViewController: UIViewController {
             newButton.layer.borderWidth = 2
             newButton.setImage(#imageLiteral(resourceName: "new").withRenderingMode(.alwaysTemplate), for: .highlighted)
         }
+        
+        interstitial = AdHelper.getInterstitial(delegate: self)
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
