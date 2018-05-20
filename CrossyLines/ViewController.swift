@@ -5,6 +5,7 @@ import Kamishibai
 import MYBlurIntroductionView
 import NYXImagesKit
 import SwiftyJSON
+import GoogleMobileAds
 
 class ViewController: UIViewController {
 
@@ -24,6 +25,8 @@ class ViewController: UIViewController {
         ("solution", UIColor(red: 0.96, green: 0.23, blue: 0.21, alpha: 1)),
         ("help", UIColor(red: 0.51, green: 0.15, blue: 1, alpha: 1)),
         ]
+    
+    var interstitial: GADInterstitial!
     
     override func viewDidLoad() {
         super.viewDidLoad()
