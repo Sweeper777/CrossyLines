@@ -21,6 +21,8 @@
 		5A3B0B482089CF4500543D63 /* NodeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3B0B472089CF4500543D63 /* NodeAnimation.swift */; };
 		5A3B0B4A2089EA5800543D63 /* GraphViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3B0B492089EA5800543D63 /* GraphViewDelegate.swift */; };
 		5A3B277620888A89007F6895 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3B277520888A89007F6895 /* Graph.swift */; };
+		5A3B59BC20AEB68700436B15 /* SecretStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3B59BB20AEB68700436B15 /* SecretStuff.swift */; };
+		5A3B59BE20AEB6FE00436B15 /* AdHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3B59BD20AEB6FE00436B15 /* AdHelper.swift */; };
 		5A3C2AC1207DF08B00B9ED72 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3C2AC0207DF08B00B9ED72 /* Node.swift */; };
 		5A3DB0CF207C9CDB000C8FF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3DB0CE207C9CDB000C8FF8 /* AppDelegate.swift */; };
 		5A3DB0D1207C9CDB000C8FF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3DB0D0207C9CDB000C8FF8 /* ViewController.swift */; };
@@ -48,6 +50,8 @@
 		5A3B0B472089CF4500543D63 /* NodeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeAnimation.swift; sourceTree = "<group>"; };
 		5A3B0B492089EA5800543D63 /* GraphViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewDelegate.swift; sourceTree = "<group>"; };
 		5A3B277520888A89007F6895 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		5A3B59BB20AEB68700436B15 /* SecretStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretStuff.swift; sourceTree = "<group>"; };
+		5A3B59BD20AEB6FE00436B15 /* AdHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdHelper.swift; sourceTree = "<group>"; };
 		5A3C2AC0207DF08B00B9ED72 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		5A3DB0CB207C9CDB000C8FF8 /* CrossyLines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossyLines.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A3DB0CE207C9CDB000C8FF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 				5A3AACAD208B28F10073530B /* AnimatedStepperCell.xib */,
 				5A3B0B492089EA5800543D63 /* GraphViewDelegate.swift */,
 				5A39D431209EEBA50055E7B2 /* SettingsControllerDelegate.swift */,
+				5A3B59BB20AEB68700436B15 /* SecretStuff.swift */,
+				5A3B59BD20AEB6FE00436B15 /* AdHelper.swift */,
 				5A3DB0D5207C9CDB000C8FF8 /* Assets.xcassets */,
 				5A3DB0D7207C9CDB000C8FF8 /* LaunchScreen.storyboard */,
 				5A3DB0DA207C9CDB000C8FF8 /* Info.plist */,
@@ -164,7 +170,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Mulang Su";
 				TargetAttributes = {
 					5A3DB0CA207C9CDB000C8FF8 = {
@@ -299,6 +305,8 @@
 				5A3B0B482089CF4500543D63 /* NodeAnimation.swift in Sources */,
 				5A390EDA20A6CC6C004C764A /* StringExtensions.swift in Sources */,
 				5A3A5D77207F432E00208DAD /* NodeView.swift in Sources */,
+				5A3B59BC20AEB68700436B15 /* SecretStuff.swift in Sources */,
+				5A3B59BE20AEB6FE00436B15 /* AdHelper.swift in Sources */,
 				5A3DB0CF207C9CDB000C8FF8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,6 +360,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -359,6 +368,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -410,6 +420,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -417,6 +428,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -456,7 +468,7 @@
 				INFOPLIST_FILE = CrossyLines/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.sweeper777.CrossyLines;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.sweeper777.KnottyLines;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -473,7 +485,7 @@
 				INFOPLIST_FILE = CrossyLines/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.sweeper777.CrossyLines;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.sweeper777.KnottyLines;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
