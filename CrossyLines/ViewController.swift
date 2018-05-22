@@ -272,3 +272,8 @@ extension ViewController: SettingsControllerDelegate {
     }
 }
 
+extension ViewController: GADInterstitialDelegate {
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+        interstitial = AdHelper.getInterstitial(delegate: self)
+    }
+}
