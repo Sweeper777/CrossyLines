@@ -68,11 +68,13 @@ class ViewController: UIViewController {
         }
     }
     
-        
-        }
-        
     @IBAction func newGraph() {
         circleMenu?.hideButtons(circleMenu.duration)
+        
+        if arc4random_uniform(10) == 0 && interstitial?.isReady ?? false {
+            interstitial.present(fromRootViewController: self)
+        }
+        
         DispatchQueue.main.async {
             [weak self] in
             guard let `self` = self else { return }
